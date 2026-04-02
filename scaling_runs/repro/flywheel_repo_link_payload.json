@@ -1,6 +1,6 @@
 {
   "repo_url": "https://github.com/tomoqt/horn-nanochat-fineweb-replication",
-  "head_commit_sha": "d1d96dbdce986e65e5df9adad408f51bb73976b0",
+  "head_commit_sha": "388af2f220dfbb38f8fa7387f73be77c334e5711",
   "note": "Apply these links to Flywheel node summaries/artifacts once auth is restored.",
   "node_links": {
     "14c6d442-4846-5f3f-9f26-bf878ff563bf": {
