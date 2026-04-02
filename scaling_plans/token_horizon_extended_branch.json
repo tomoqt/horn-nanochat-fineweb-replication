@@ -1,0 +1,59 @@
+{
+  "experiment_name": "token_horizon_scaling_horn_nanochat_extended",
+  "target_tokens_per_step": 4096,
+  "fixed_model": {
+    "n_layer": 4,
+    "n_head": 4,
+    "n_embd": 128,
+    "dropout": 0.0
+  },
+  "shared_training": {
+    "variants": ["baseline", "horn"],
+    "seeds": [1337, 2027],
+    "steps": 600,
+    "eval_interval": 100,
+    "eval_iters": 30,
+    "horn_m_init": 0.5
+  },
+  "branches": [
+    {
+      "name": "horizon_512",
+      "block_size": 512,
+      "batch_size": 8,
+      "tokens_per_step": 4096,
+      "outdir_name": "horizon_512"
+    },
+    {
+      "name": "horizon_768",
+      "block_size": 768,
+      "batch_size": 5,
+      "tokens_per_step": 3840,
+      "outdir_name": "horizon_768"
+    },
+    {
+      "name": "horizon_1024",
+      "block_size": 1024,
+      "batch_size": 4,
+      "tokens_per_step": 4096,
+      "outdir_name": "horizon_1024"
+    },
+    {
+      "name": "horizon_1536",
+      "block_size": 1536,
+      "batch_size": 2,
+      "tokens_per_step": 3072,
+      "outdir_name": "horizon_1536"
+    },
+    {
+      "name": "horizon_2048",
+      "block_size": 2048,
+      "batch_size": 2,
+      "tokens_per_step": 4096,
+      "outdir_name": "horizon_2048"
+    }
+  ],
+  "follow_up": {
+    "status": "pending",
+    "description": "Compare extended-horizon trend against prior 128/256/384 sweep and optionally rerun joint selection with larger context winners."
+  }
+}

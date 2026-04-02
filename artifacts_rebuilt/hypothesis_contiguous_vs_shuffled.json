@@ -1,0 +1,15 @@
+{
+  "baseline": {
+    "loss": 4.406630992889404,
+    "delta_loss_vs_baseline": 0.0,
+    "sink_first4": 0.16557173430919647,
+    "sink_last3": 0.004310402553528547
+  },
+  "shuffled": {
+    "loss": 8.050933837890625,
+    "delta_loss_vs_baseline": 3.6443028450012207,
+    "sink_first4": 0.16243807971477509,
+    "sink_last3": 0.004382400773465633
+  },
+  "claim": "If sink_first4 remains elevated under shuffled inputs, sink behavior is not tied only to coherent local order."
+}

@@ -1,0 +1,69 @@
+{
+  "generated_on": "2026-04-01",
+  "study": "HORN-vs-baseline nanochat-like pretraining scaling study on FineWeb",
+  "graph": {
+    "original_horn_root": "f3c1b9cf-5904-57e5-abc7-ad8b91789f89",
+    "scaling_root": "14c6d442-4846-5f3f-9f26-bf878ff563bf",
+    "nodes": {
+      "model_branch_empirical": "72f74c83-265e-5bd3-bea7-d10b5ed72d12",
+      "horizon_branch_empirical": "f8f939dd-096f-57f1-8a2c-bd507ecb1b08",
+      "synthesis_insight": "502fe30b-fefc-5ea0-a6b5-ba448941cabf",
+      "joint_branch_empirical": "797f2040-c59f-518c-b492-7c133f3c7a36",
+      "final_insight": "8a3d53c5-c68c-5c4b-8a41-58a4c52f6a0c"
+    },
+    "edges_expected": [
+      ["14c6d442-4846-5f3f-9f26-bf878ff563bf", "72f74c83-265e-5bd3-bea7-d10b5ed72d12"],
+      ["14c6d442-4846-5f3f-9f26-bf878ff563bf", "f8f939dd-096f-57f1-8a2c-bd507ecb1b08"],
+      ["72f74c83-265e-5bd3-bea7-d10b5ed72d12", "502fe30b-fefc-5ea0-a6b5-ba448941cabf"],
+      ["f8f939dd-096f-57f1-8a2c-bd507ecb1b08", "502fe30b-fefc-5ea0-a6b5-ba448941cabf"],
+      ["502fe30b-fefc-5ea0-a6b5-ba448941cabf", "797f2040-c59f-518c-b492-7c133f3c7a36"],
+      ["502fe30b-fefc-5ea0-a6b5-ba448941cabf", "8a3d53c5-c68c-5c4b-8a41-58a4c52f6a0c"],
+      ["797f2040-c59f-518c-b492-7c133f3c7a36", "8a3d53c5-c68c-5c4b-8a41-58a4c52f6a0c"],
+      ["f3c1b9cf-5904-57e5-abc7-ad8b91789f89", "14c6d442-4846-5f3f-9f26-bf878ff563bf"]
+    ]
+  },
+  "dataset": {
+    "name": "fineweb",
+    "candidates": [
+      "HuggingFaceFW/fineweb/sample-10BT",
+      "HuggingFaceFW/fineweb-edu/sample-10BT",
+      "HuggingFaceFW/fineweb/default",
+      "HuggingFaceFW/fineweb-edu/default"
+    ],
+    "data_path": "/workspace/data/fineweb_sample.txt",
+    "fineweb_target_chars": 8000000,
+    "fineweb_max_docs": 40000,
+    "no_tinyshakespeare_fallback": true
+  },
+  "entrypoints": {
+    "benchmark": "horn_nanochat_benchmark.py",
+    "model_branch_runner": "scaling_plans/run_model_size_branch.sh",
+    "horizon_branch_runner": "scaling_plans/run_token_horizon_branch.sh",
+    "joint_plan_builder": "scaling_plans/prepare_joint_plan.py",
+    "joint_runner": "scaling_plans/run_joint_scaling.sh",
+    "plotter": "scaling_runs/plots/make_loss_plots.py"
+  },
+  "commands": [
+    "bash scaling_plans/run_model_size_branch.sh",
+    "bash scaling_plans/run_token_horizon_branch.sh",
+    "python3 scaling_plans/prepare_joint_plan.py --model-branch-dir /workspace/scaling/model_size --horizon-branch-dir /workspace/scaling/token_horizon --out-json /workspace/scaling/joint/joint_plan.json --out-md /workspace/scaling/joint/joint_plan.md --steps 600 --eval-interval 100 --eval-iters 30",
+    "bash scaling_plans/run_joint_scaling.sh /workspace/scaling/joint/joint_plan.json /workspace/horn_nanochat_benchmark.py /workspace/scaling/joint",
+    "python3 scaling_runs/plots/make_loss_plots.py"
+  ],
+  "expected_outputs": [
+    "scaling_runs/model_branch/model_branch_summary.json",
+    "scaling_runs/horizon_branch/horizon_branch_summary.json",
+    "scaling_runs/joint_branch/joint_plan.json",
+    "scaling_runs/joint_branch/joint_branch_summary.json",
+    "scaling_runs/plots/model_size_val_curves.png",
+    "scaling_runs/plots/horizon_final_loss_bars.png",
+    "scaling_runs/plots/joint_val_curves.png",
+    "scaling_runs/plots/loss_plot_metrics.json"
+  ],
+  "result_snapshot": {
+    "joint_baseline_final_val_loss_mean": 2.1668617963790897,
+    "joint_horn_final_val_loss_mean": 2.17807465394338,
+    "joint_delta_horn_minus_baseline": 0.011212857564290246,
+    "winner": "baseline"
+  }
+}

@@ -1,0 +1,671 @@
+{
+  "dataset_metadata": {
+    "dataset": "fineweb",
+    "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+    "fineweb_target_chars": 8000000,
+    "fineweb_max_docs": 40000
+  },
+  "per_run_results": [
+    {
+      "path": "/Users/tensorqt/Downloads/paper replication/scaling_runs/model_branch/large_fixed_horizon/baseline/seed_1337/benchmark_summary.json",
+      "experiment": "large_fixed_horizon",
+      "variant": "baseline",
+      "seed": 1337,
+      "config": {
+        "variants": [
+          "baseline"
+        ],
+        "seeds": [
+          1337
+        ],
+        "steps": 500,
+        "eval_interval": 100,
+        "eval_iters": 20,
+        "batch_size": 12,
+        "block_size": 128,
+        "n_layer": 6,
+        "n_head": 8,
+        "n_embd": 192,
+        "dropout": 0.0,
+        "lr": 0.002,
+        "weight_decay": 0.01,
+        "grad_clip": 1.0,
+        "horn_m_init": 0.5,
+        "horn_eta_init": 1.0,
+        "device": "cuda",
+        "dataset": "fineweb",
+        "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+        "data_path": "/workspace/data/fineweb_sample.txt",
+        "is_chat_like_dataset": false,
+        "fineweb_target_chars": 8000000,
+        "fineweb_max_docs": 40000
+      },
+      "final_val_loss": 2.4458189368247987,
+      "best_val_loss": 2.4458189368247987,
+      "wall_seconds": 17.093225479125977,
+      "dataset": "fineweb",
+      "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+      "fineweb_target_chars": 8000000,
+      "fineweb_max_docs": 40000,
+      "n_layer": 6,
+      "n_head": 8,
+      "n_embd": 192,
+      "batch_size": 12,
+      "block_size": 128
+    },
+    {
+      "path": "/Users/tensorqt/Downloads/paper replication/scaling_runs/model_branch/large_fixed_horizon/baseline/seed_2027/benchmark_summary.json",
+      "experiment": "large_fixed_horizon",
+      "variant": "baseline",
+      "seed": 2027,
+      "config": {
+        "variants": [
+          "baseline"
+        ],
+        "seeds": [
+          2027
+        ],
+        "steps": 500,
+        "eval_interval": 100,
+        "eval_iters": 20,
+        "batch_size": 12,
+        "block_size": 128,
+        "n_layer": 6,
+        "n_head": 8,
+        "n_embd": 192,
+        "dropout": 0.0,
+        "lr": 0.002,
+        "weight_decay": 0.01,
+        "grad_clip": 1.0,
+        "horn_m_init": 0.5,
+        "horn_eta_init": 1.0,
+        "device": "cuda",
+        "dataset": "fineweb",
+        "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+        "data_path": "/workspace/data/fineweb_sample.txt",
+        "is_chat_like_dataset": false,
+        "fineweb_target_chars": 8000000,
+        "fineweb_max_docs": 40000
+      },
+      "final_val_loss": 2.367598807811737,
+      "best_val_loss": 2.367598807811737,
+      "wall_seconds": 17.081851482391357,
+      "dataset": "fineweb",
+      "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+      "fineweb_target_chars": 8000000,
+      "fineweb_max_docs": 40000,
+      "n_layer": 6,
+      "n_head": 8,
+      "n_embd": 192,
+      "batch_size": 12,
+      "block_size": 128
+    },
+    {
+      "path": "/Users/tensorqt/Downloads/paper replication/scaling_runs/model_branch/large_fixed_horizon/horn/seed_1337/benchmark_summary.json",
+      "experiment": "large_fixed_horizon",
+      "variant": "horn",
+      "seed": 1337,
+      "config": {
+        "variants": [
+          "horn"
+        ],
+        "seeds": [
+          1337
+        ],
+        "steps": 500,
+        "eval_interval": 100,
+        "eval_iters": 20,
+        "batch_size": 12,
+        "block_size": 128,
+        "n_layer": 6,
+        "n_head": 8,
+        "n_embd": 192,
+        "dropout": 0.0,
+        "lr": 0.002,
+        "weight_decay": 0.01,
+        "grad_clip": 1.0,
+        "horn_m_init": 0.5,
+        "horn_eta_init": 1.0,
+        "device": "cuda",
+        "dataset": "fineweb",
+        "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+        "data_path": "/workspace/data/fineweb_sample.txt",
+        "is_chat_like_dataset": false,
+        "fineweb_target_chars": 8000000,
+        "fineweb_max_docs": 40000
+      },
+      "final_val_loss": 2.4197231769561767,
+      "best_val_loss": 2.4197231769561767,
+      "wall_seconds": 26.69700837135315,
+      "dataset": "fineweb",
+      "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+      "fineweb_target_chars": 8000000,
+      "fineweb_max_docs": 40000,
+      "n_layer": 6,
+      "n_head": 8,
+      "n_embd": 192,
+      "batch_size": 12,
+      "block_size": 128
+    },
+    {
+      "path": "/Users/tensorqt/Downloads/paper replication/scaling_runs/model_branch/large_fixed_horizon/horn/seed_2027/benchmark_summary.json",
+      "experiment": "large_fixed_horizon",
+      "variant": "horn",
+      "seed": 2027,
+      "config": {
+        "variants": [
+          "horn"
+        ],
+        "seeds": [
+          2027
+        ],
+        "steps": 500,
+        "eval_interval": 100,
+        "eval_iters": 20,
+        "batch_size": 12,
+        "block_size": 128,
+        "n_layer": 6,
+        "n_head": 8,
+        "n_embd": 192,
+        "dropout": 0.0,
+        "lr": 0.002,
+        "weight_decay": 0.01,
+        "grad_clip": 1.0,
+        "horn_m_init": 0.5,
+        "horn_eta_init": 1.0,
+        "device": "cuda",
+        "dataset": "fineweb",
+        "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+        "data_path": "/workspace/data/fineweb_sample.txt",
+        "is_chat_like_dataset": false,
+        "fineweb_target_chars": 8000000,
+        "fineweb_max_docs": 40000
+      },
+      "final_val_loss": 2.363930141925812,
+      "best_val_loss": 2.363930141925812,
+      "wall_seconds": 24.954864740371704,
+      "dataset": "fineweb",
+      "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+      "fineweb_target_chars": 8000000,
+      "fineweb_max_docs": 40000,
+      "n_layer": 6,
+      "n_head": 8,
+      "n_embd": 192,
+      "batch_size": 12,
+      "block_size": 128
+    },
+    {
+      "path": "/Users/tensorqt/Downloads/paper replication/scaling_runs/model_branch/medium_fixed_horizon/baseline/seed_1337/benchmark_summary.json",
+      "experiment": "medium_fixed_horizon",
+      "variant": "baseline",
+      "seed": 1337,
+      "config": {
+        "variants": [
+          "baseline"
+        ],
+        "seeds": [
+          1337
+        ],
+        "steps": 500,
+        "eval_interval": 100,
+        "eval_iters": 20,
+        "batch_size": 24,
+        "block_size": 128,
+        "n_layer": 4,
+        "n_head": 4,
+        "n_embd": 128,
+        "dropout": 0.0,
+        "lr": 0.002,
+        "weight_decay": 0.01,
+        "grad_clip": 1.0,
+        "horn_m_init": 0.5,
+        "horn_eta_init": 1.0,
+        "device": "cuda",
+        "dataset": "fineweb",
+        "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+        "data_path": "/workspace/data/fineweb_sample.txt",
+        "is_chat_like_dataset": false,
+        "fineweb_target_chars": 8000000,
+        "fineweb_max_docs": 40000
+      },
+      "final_val_loss": 2.2807432770729066,
+      "best_val_loss": 2.2807432770729066,
+      "wall_seconds": 22.38395357131958,
+      "dataset": "fineweb",
+      "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+      "fineweb_target_chars": 8000000,
+      "fineweb_max_docs": 40000,
+      "n_layer": 4,
+      "n_head": 4,
+      "n_embd": 128,
+      "batch_size": 24,
+      "block_size": 128
+    },
+    {
+      "path": "/Users/tensorqt/Downloads/paper replication/scaling_runs/model_branch/medium_fixed_horizon/baseline/seed_2027/benchmark_summary.json",
+      "experiment": "medium_fixed_horizon",
+      "variant": "baseline",
+      "seed": 2027,
+      "config": {
+        "variants": [
+          "baseline"
+        ],
+        "seeds": [
+          2027
+        ],
+        "steps": 500,
+        "eval_interval": 100,
+        "eval_iters": 20,
+        "batch_size": 24,
+        "block_size": 128,
+        "n_layer": 4,
+        "n_head": 4,
+        "n_embd": 128,
+        "dropout": 0.0,
+        "lr": 0.002,
+        "weight_decay": 0.01,
+        "grad_clip": 1.0,
+        "horn_m_init": 0.5,
+        "horn_eta_init": 1.0,
+        "device": "cuda",
+        "dataset": "fineweb",
+        "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+        "data_path": "/workspace/data/fineweb_sample.txt",
+        "is_chat_like_dataset": false,
+        "fineweb_target_chars": 8000000,
+        "fineweb_max_docs": 40000
+      },
+      "final_val_loss": 2.2849133253097533,
+      "best_val_loss": 2.2849133253097533,
+      "wall_seconds": 15.065311193466187,
+      "dataset": "fineweb",
+      "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+      "fineweb_target_chars": 8000000,
+      "fineweb_max_docs": 40000,
+      "n_layer": 4,
+      "n_head": 4,
+      "n_embd": 128,
+      "batch_size": 24,
+      "block_size": 128
+    },
+    {
+      "path": "/Users/tensorqt/Downloads/paper replication/scaling_runs/model_branch/medium_fixed_horizon/horn/seed_1337/benchmark_summary.json",
+      "experiment": "medium_fixed_horizon",
+      "variant": "horn",
+      "seed": 1337,
+      "config": {
+        "variants": [
+          "horn"
+        ],
+        "seeds": [
+          1337
+        ],
+        "steps": 500,
+        "eval_interval": 100,
+        "eval_iters": 20,
+        "batch_size": 24,
+        "block_size": 128,
+        "n_layer": 4,
+        "n_head": 4,
+        "n_embd": 128,
+        "dropout": 0.0,
+        "lr": 0.002,
+        "weight_decay": 0.01,
+        "grad_clip": 1.0,
+        "horn_m_init": 0.5,
+        "horn_eta_init": 1.0,
+        "device": "cuda",
+        "dataset": "fineweb",
+        "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+        "data_path": "/workspace/data/fineweb_sample.txt",
+        "is_chat_like_dataset": false,
+        "fineweb_target_chars": 8000000,
+        "fineweb_max_docs": 40000
+      },
+      "final_val_loss": 2.322230136394501,
+      "best_val_loss": 2.322230136394501,
+      "wall_seconds": 20.52294373512268,
+      "dataset": "fineweb",
+      "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+      "fineweb_target_chars": 8000000,
+      "fineweb_max_docs": 40000,
+      "n_layer": 4,
+      "n_head": 4,
+      "n_embd": 128,
+      "batch_size": 24,
+      "block_size": 128
+    },
+    {
+      "path": "/Users/tensorqt/Downloads/paper replication/scaling_runs/model_branch/medium_fixed_horizon/horn/seed_2027/benchmark_summary.json",
+      "experiment": "medium_fixed_horizon",
+      "variant": "horn",
+      "seed": 2027,
+      "config": {
+        "variants": [
+          "horn"
+        ],
+        "seeds": [
+          2027
+        ],
+        "steps": 500,
+        "eval_interval": 100,
+        "eval_iters": 20,
+        "batch_size": 24,
+        "block_size": 128,
+        "n_layer": 4,
+        "n_head": 4,
+        "n_embd": 128,
+        "dropout": 0.0,
+        "lr": 0.002,
+        "weight_decay": 0.01,
+        "grad_clip": 1.0,
+        "horn_m_init": 0.5,
+        "horn_eta_init": 1.0,
+        "device": "cuda",
+        "dataset": "fineweb",
+        "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+        "data_path": "/workspace/data/fineweb_sample.txt",
+        "is_chat_like_dataset": false,
+        "fineweb_target_chars": 8000000,
+        "fineweb_max_docs": 40000
+      },
+      "final_val_loss": 2.293536388874054,
+      "best_val_loss": 2.293536388874054,
+      "wall_seconds": 24.610138654708862,
+      "dataset": "fineweb",
+      "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+      "fineweb_target_chars": 8000000,
+      "fineweb_max_docs": 40000,
+      "n_layer": 4,
+      "n_head": 4,
+      "n_embd": 128,
+      "batch_size": 24,
+      "block_size": 128
+    },
+    {
+      "path": "/Users/tensorqt/Downloads/paper replication/scaling_runs/model_branch/small_fixed_horizon/baseline/seed_1337/benchmark_summary.json",
+      "experiment": "small_fixed_horizon",
+      "variant": "baseline",
+      "seed": 1337,
+      "config": {
+        "variants": [
+          "baseline"
+        ],
+        "seeds": [
+          1337
+        ],
+        "steps": 500,
+        "eval_interval": 100,
+        "eval_iters": 20,
+        "batch_size": 32,
+        "block_size": 128,
+        "n_layer": 2,
+        "n_head": 2,
+        "n_embd": 64,
+        "dropout": 0.0,
+        "lr": 0.002,
+        "weight_decay": 0.01,
+        "grad_clip": 1.0,
+        "horn_m_init": 0.5,
+        "horn_eta_init": 1.0,
+        "device": "cuda",
+        "dataset": "fineweb",
+        "dataset_source": "hf:HuggingFaceFW/fineweb/sample-10BT",
+        "data_path": "/workspace/data/fineweb_sample.txt",
+        "is_chat_like_dataset": false,
+        "fineweb_target_chars": 8000000,
+        "fineweb_max_docs": 40000
+      },
+      "final_val_loss": 2.4672154903411867,
+      "best_val_loss": 2.4672154903411867,
+      "wall_seconds": 11.121217250823975,
+      "dataset": "fineweb",
+      "dataset_source": "hf:HuggingFaceFW/fineweb/sample-10BT",
+      "fineweb_target_chars": 8000000,
+      "fineweb_max_docs": 40000,
+      "n_layer": 2,
+      "n_head": 2,
+      "n_embd": 64,
+      "batch_size": 32,
+      "block_size": 128
+    },
+    {
+      "path": "/Users/tensorqt/Downloads/paper replication/scaling_runs/model_branch/small_fixed_horizon/baseline/seed_2027/benchmark_summary.json",
+      "experiment": "small_fixed_horizon",
+      "variant": "baseline",
+      "seed": 2027,
+      "config": {
+        "variants": [
+          "baseline"
+        ],
+        "seeds": [
+          2027
+        ],
+        "steps": 500,
+        "eval_interval": 100,
+        "eval_iters": 20,
+        "batch_size": 32,
+        "block_size": 128,
+        "n_layer": 2,
+        "n_head": 2,
+        "n_embd": 64,
+        "dropout": 0.0,
+        "lr": 0.002,
+        "weight_decay": 0.01,
+        "grad_clip": 1.0,
+        "horn_m_init": 0.5,
+        "horn_eta_init": 1.0,
+        "device": "cuda",
+        "dataset": "fineweb",
+        "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+        "data_path": "/workspace/data/fineweb_sample.txt",
+        "is_chat_like_dataset": false,
+        "fineweb_target_chars": 8000000,
+        "fineweb_max_docs": 40000
+      },
+      "final_val_loss": 2.4885727524757386,
+      "best_val_loss": 2.4885727524757386,
+      "wall_seconds": 16.177549600601196,
+      "dataset": "fineweb",
+      "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+      "fineweb_target_chars": 8000000,
+      "fineweb_max_docs": 40000,
+      "n_layer": 2,
+      "n_head": 2,
+      "n_embd": 64,
+      "batch_size": 32,
+      "block_size": 128
+    },
+    {
+      "path": "/Users/tensorqt/Downloads/paper replication/scaling_runs/model_branch/small_fixed_horizon/horn/seed_1337/benchmark_summary.json",
+      "experiment": "small_fixed_horizon",
+      "variant": "horn",
+      "seed": 1337,
+      "config": {
+        "variants": [
+          "horn"
+        ],
+        "seeds": [
+          1337
+        ],
+        "steps": 500,
+        "eval_interval": 100,
+        "eval_iters": 20,
+        "batch_size": 32,
+        "block_size": 128,
+        "n_layer": 2,
+        "n_head": 2,
+        "n_embd": 64,
+        "dropout": 0.0,
+        "lr": 0.002,
+        "weight_decay": 0.01,
+        "grad_clip": 1.0,
+        "horn_m_init": 0.5,
+        "horn_eta_init": 1.0,
+        "device": "cuda",
+        "dataset": "fineweb",
+        "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+        "data_path": "/workspace/data/fineweb_sample.txt",
+        "is_chat_like_dataset": false,
+        "fineweb_target_chars": 8000000,
+        "fineweb_max_docs": 40000
+      },
+      "final_val_loss": 2.4626452207565306,
+      "best_val_loss": 2.4626452207565306,
+      "wall_seconds": 10.158450603485107,
+      "dataset": "fineweb",
+      "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+      "fineweb_target_chars": 8000000,
+      "fineweb_max_docs": 40000,
+      "n_layer": 2,
+      "n_head": 2,
+      "n_embd": 64,
+      "batch_size": 32,
+      "block_size": 128
+    },
+    {
+      "path": "/Users/tensorqt/Downloads/paper replication/scaling_runs/model_branch/small_fixed_horizon/horn/seed_2027/benchmark_summary.json",
+      "experiment": "small_fixed_horizon",
+      "variant": "horn",
+      "seed": 2027,
+      "config": {
+        "variants": [
+          "horn"
+        ],
+        "seeds": [
+          2027
+        ],
+        "steps": 500,
+        "eval_interval": 100,
+        "eval_iters": 20,
+        "batch_size": 32,
+        "block_size": 128,
+        "n_layer": 2,
+        "n_head": 2,
+        "n_embd": 64,
+        "dropout": 0.0,
+        "lr": 0.002,
+        "weight_decay": 0.01,
+        "grad_clip": 1.0,
+        "horn_m_init": 0.5,
+        "horn_eta_init": 1.0,
+        "device": "cuda",
+        "dataset": "fineweb",
+        "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+        "data_path": "/workspace/data/fineweb_sample.txt",
+        "is_chat_like_dataset": false,
+        "fineweb_target_chars": 8000000,
+        "fineweb_max_docs": 40000
+      },
+      "final_val_loss": 2.4879642128944397,
+      "best_val_loss": 2.4879642128944397,
+      "wall_seconds": 8.799773216247559,
+      "dataset": "fineweb",
+      "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+      "fineweb_target_chars": 8000000,
+      "fineweb_max_docs": 40000,
+      "n_layer": 2,
+      "n_head": 2,
+      "n_embd": 64,
+      "batch_size": 32,
+      "block_size": 128
+    }
+  ],
+  "aggregate_results": [
+    {
+      "experiment": "large_fixed_horizon",
+      "variant": "baseline",
+      "n_runs": 2,
+      "seed_order": [
+        1337,
+        2027
+      ],
+      "final_val_loss_mean": 2.406708872318268,
+      "final_val_loss_std": 0.03911006450653076,
+      "best_val_loss_mean": 2.406708872318268,
+      "best_val_loss_std": 0.03911006450653076
+    },
+    {
+      "experiment": "large_fixed_horizon",
+      "variant": "horn",
+      "n_runs": 2,
+      "seed_order": [
+        1337,
+        2027
+      ],
+      "final_val_loss_mean": 2.3918266594409943,
+      "final_val_loss_std": 0.027896517515182406,
+      "best_val_loss_mean": 2.3918266594409943,
+      "best_val_loss_std": 0.027896517515182406
+    },
+    {
+      "experiment": "medium_fixed_horizon",
+      "variant": "baseline",
+      "n_runs": 2,
+      "seed_order": [
+        1337,
+        2027
+      ],
+      "final_val_loss_mean": 2.28282830119133,
+      "final_val_loss_std": 0.002085024118423373,
+      "best_val_loss_mean": 2.28282830119133,
+      "best_val_loss_std": 0.002085024118423373
+    },
+    {
+      "experiment": "medium_fixed_horizon",
+      "variant": "horn",
+      "n_runs": 2,
+      "seed_order": [
+        1337,
+        2027
+      ],
+      "final_val_loss_mean": 2.3078832626342773,
+      "final_val_loss_std": 0.014346873760223477,
+      "best_val_loss_mean": 2.3078832626342773,
+      "best_val_loss_std": 0.014346873760223477
+    },
+    {
+      "experiment": "small_fixed_horizon",
+      "variant": "baseline",
+      "n_runs": 2,
+      "seed_order": [
+        1337,
+        2027
+      ],
+      "final_val_loss_mean": 2.477894121408463,
+      "final_val_loss_std": 0.010678631067275957,
+      "best_val_loss_mean": 2.477894121408463,
+      "best_val_loss_std": 0.010678631067275957
+    },
+    {
+      "experiment": "small_fixed_horizon",
+      "variant": "horn",
+      "n_runs": 2,
+      "seed_order": [
+        1337,
+        2027
+      ],
+      "final_val_loss_mean": 2.475304716825485,
+      "final_val_loss_std": 0.012659496068954557,
+      "best_val_loss_mean": 2.475304716825485,
+      "best_val_loss_std": 0.012659496068954557
+    }
+  ],
+  "best_horn_config": {
+    "experiment": "medium_fixed_horizon",
+    "variant": "horn",
+    "n_runs": 2,
+    "seed_order": [
+      1337,
+      2027
+    ],
+    "final_val_loss_mean": 2.3078832626342773,
+    "final_val_loss_std": 0.014346873760223477,
+    "best_val_loss_mean": 2.3078832626342773,
+    "best_val_loss_std": 0.014346873760223477
+  },
+  "notes": [
+    "Verification gate passed: benchmark_summary.json reports dataset=fineweb and dataset_source=cache:/workspace/data/fineweb_sample.txt.",
+    "The remote host initially lacked the datasets package, which caused a tinyshakespeare fallback; that host state was corrected before the final FineWeb rerun."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "experiment_name": "joint_scaled_from_branch_winners",
+  "selection": {
+    "model_branch_winner": {
+      "name": "medium_fixed_horizon",
+      "horn_final_val_loss_mean": 2.3078832626342773
+    },
+    "horizon_branch_winner": {
+      "name": "horizon_128",
+      "horn_final_val_loss_mean": 2.2262328565120697
+    }
+  },
+  "run_config": {
+    "variants": [
+      "baseline",
+      "horn"
+    ],
+    "seeds": [
+      1337,
+      2027
+    ],
+    "steps": 600,
+    "eval_interval": 100,
+    "eval_iters": 30,
+    "horn_m_init": 0.5,
+    "n_layer": 4,
+    "n_head": 4,
+    "n_embd": 128,
+    "block_size": 128,
+    "batch_size": 32
+  }
+}

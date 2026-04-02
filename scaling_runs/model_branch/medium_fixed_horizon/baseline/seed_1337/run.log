@@ -1,0 +1,22 @@
+device=cuda
+vocab_size=600 train_tokens=7222914 val_tokens=802547
+
+=== Run 1/1: variant=baseline seed=1337 ===
+[baseline] seed=1337 step=0/500 train=6.4604 val=6.4601
+[baseline] seed=1337 step=100/500 train=2.6350 val=2.6654
+[baseline] seed=1337 step=200/500 train=2.6001 val=2.6084
+[baseline] seed=1337 step=300/500 train=2.4860 val=2.5171
+[baseline] seed=1337 step=400/500 train=2.3414 val=2.3442
+[baseline] seed=1337 step=500/500 train=2.2660 val=2.2807
+{
+  "baseline": {
+    "n_runs": 1,
+    "final_val_loss_mean": 2.2807432770729066,
+    "final_val_loss_std": 0.0,
+    "best_val_loss_mean": 2.2807432770729066,
+    "best_val_loss_std": 0.0,
+    "wall_seconds_mean": 22.38395357131958,
+    "delta_final_vs_baseline": 0.0,
+    "delta_best_vs_baseline": 0.0
+  }
+}

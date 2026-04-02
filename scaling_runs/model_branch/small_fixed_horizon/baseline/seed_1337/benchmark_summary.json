@@ -1,0 +1,80 @@
+{
+  "config": {
+    "variants": [
+      "baseline"
+    ],
+    "seeds": [
+      1337
+    ],
+    "steps": 500,
+    "eval_interval": 100,
+    "eval_iters": 20,
+    "batch_size": 32,
+    "block_size": 128,
+    "n_layer": 2,
+    "n_head": 2,
+    "n_embd": 64,
+    "dropout": 0.0,
+    "lr": 0.002,
+    "weight_decay": 0.01,
+    "grad_clip": 1.0,
+    "horn_m_init": 0.5,
+    "horn_eta_init": 1.0,
+    "device": "cuda",
+    "dataset": "fineweb",
+    "dataset_source": "hf:HuggingFaceFW/fineweb/sample-10BT",
+    "data_path": "/workspace/data/fineweb_sample.txt",
+    "is_chat_like_dataset": false,
+    "fineweb_target_chars": 8000000,
+    "fineweb_max_docs": 40000
+  },
+  "summary": {
+    "baseline": {
+      "n_runs": 1,
+      "final_val_loss_mean": 2.4672154903411867,
+      "final_val_loss_std": 0.0,
+      "best_val_loss_mean": 2.4672154903411867,
+      "best_val_loss_std": 0.0,
+      "wall_seconds_mean": 11.121217250823975,
+      "delta_final_vs_baseline": 0.0,
+      "delta_best_vs_baseline": 0.0
+    }
+  },
+  "runs": [
+    {
+      "variant": "baseline",
+      "seed": 1337,
+      "train_losses": [
+        6.392627596855164,
+        2.669522500038147,
+        2.603645610809326,
+        2.595413553714752,
+        2.551834797859192,
+        2.4379465699195864
+      ],
+      "val_steps": [
+        0,
+        100,
+        200,
+        300,
+        400,
+        500
+      ],
+      "val_losses": [
+        6.393636441230774,
+        2.698002338409424,
+        2.6308176279067994,
+        2.626897764205933,
+        2.58641996383667,
+        2.4672154903411867
+      ],
+      "horn_m_mean": [],
+      "horn_eta_mean": [],
+      "horn_v_rms": [],
+      "final_val_loss": 2.4672154903411867,
+      "best_val_loss": 2.4672154903411867,
+      "wall_seconds": 11.121217250823975,
+      "tokens_seen": 2048000
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+device=cuda
+vocab_size=68 train_tokens=3499083 val_tokens=388788
+
+=== Run 1/3: variant=horn seed=1337 ===
+[horn] seed=1337 step=0/600 train=4.2448 val=4.2431
+[horn] seed=1337 step=100/600 train=1.5455 val=1.4926
+[horn] seed=1337 step=200/600 train=1.4280 val=1.3718
+[horn] seed=1337 step=300/600 train=1.3018 val=1.2520
+[horn] seed=1337 step=400/600 train=1.2288 val=1.2191
+[horn] seed=1337 step=500/600 train=1.1801 val=1.1595
+[horn] seed=1337 step=600/600 train=1.1184 val=1.1304
+
+=== Run 2/3: variant=horn seed=2027 ===
+[horn] seed=2027 step=0/600 train=4.2449 val=4.2462
+[horn] seed=2027 step=100/600 train=1.5900 val=1.5434
+[horn] seed=2027 step=200/600 train=1.4072 val=1.3600
+[horn] seed=2027 step=300/600 train=1.3334 val=1.2907
+[horn] seed=2027 step=400/600 train=1.2228 val=1.2188
+[horn] seed=2027 step=500/600 train=1.1647 val=1.1736
+[horn] seed=2027 step=600/600 train=1.1217 val=1.1460
+
+=== Run 3/3: variant=horn seed=3141 ===
+[horn] seed=3141 step=0/600 train=4.2531 val=4.2520
+[horn] seed=3141 step=100/600 train=1.5738 val=1.5271
+[horn] seed=3141 step=200/600 train=1.3995 val=1.3433
+[horn] seed=3141 step=300/600 train=1.3172 val=1.2789
+[horn] seed=3141 step=400/600 train=1.2360 val=1.2111
+[horn] seed=3141 step=500/600 train=1.1749 val=1.1747
+[horn] seed=3141 step=600/600 train=1.1063 val=1.1261
+{
+  "horn": {
+    "n_runs": 3,
+    "final_val_loss_mean": 1.1341670738326177,
+    "final_val_loss_std": 0.008557122752323879,
+    "best_val_loss_mean": 1.1341670738326177,
+    "best_val_loss_std": 0.008557122752323879,
+    "wall_seconds_mean": 29.32576076189677,
+    "delta_final_vs_baseline": 0.0,
+    "delta_best_vs_baseline": 0.0
+  }
+}

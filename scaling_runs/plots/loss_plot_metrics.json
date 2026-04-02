@@ -1,0 +1,51 @@
+[
+  {
+    "group": "model_size",
+    "name": "large_fixed_horizon",
+    "baseline_final_val_loss_mean": 2.406708872318268,
+    "horn_final_val_loss_mean": 2.3918266594409943,
+    "delta_horn_minus_baseline": -0.014882212877273648
+  },
+  {
+    "group": "model_size",
+    "name": "medium_fixed_horizon",
+    "baseline_final_val_loss_mean": 2.28282830119133,
+    "horn_final_val_loss_mean": 2.3078832626342773,
+    "delta_horn_minus_baseline": 0.025054961442947388
+  },
+  {
+    "group": "model_size",
+    "name": "small_fixed_horizon",
+    "baseline_final_val_loss_mean": 2.477894121408463,
+    "horn_final_val_loss_mean": 2.475304716825485,
+    "delta_horn_minus_baseline": -0.002589404582977739
+  },
+  {
+    "group": "token_horizon",
+    "name": "horizon_128",
+    "baseline_final_val_loss_mean": 2.2256582200527193,
+    "horn_final_val_loss_mean": 2.2262328565120697,
+    "delta_horn_minus_baseline": 0.0005746364593504083
+  },
+  {
+    "group": "token_horizon",
+    "name": "horizon_256",
+    "baseline_final_val_loss_mean": 2.449692666530609,
+    "horn_final_val_loss_mean": 2.4693105041980745,
+    "delta_horn_minus_baseline": 0.019617837667465388
+  },
+  {
+    "group": "token_horizon",
+    "name": "horizon_384",
+    "baseline_final_val_loss_mean": 2.596056067943573,
+    "horn_final_val_loss_mean": 2.5952972769737244,
+    "delta_horn_minus_baseline": -0.000758790969848544
+  },
+  {
+    "group": "joint",
+    "name": "joint_scaled_from_branch_winners",
+    "baseline_final_val_loss_mean": 2.1668617963790897,
+    "horn_final_val_loss_mean": 2.17807465394338,
+    "delta_horn_minus_baseline": 0.011212857564290246
+  }
+]

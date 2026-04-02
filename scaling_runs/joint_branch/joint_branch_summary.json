@@ -1,0 +1,77 @@
+{
+  "data_path": "/workspace/data/fineweb_sample.txt",
+  "dataset": "fineweb",
+  "dataset_source": "hf:HuggingFaceFW/fineweb/sample-10BT",
+  "fineweb_max_docs": 40000,
+  "fineweb_target_chars": 8000000,
+  "joint_config": {
+    "batch_size": 32,
+    "block_size": 128,
+    "eval_interval": 100,
+    "eval_iters": 30,
+    "horn_eta_init": 1.0,
+    "horn_m_init": 0.5,
+    "n_embd": 128,
+    "n_head": 4,
+    "n_layer": 4,
+    "steps": 600
+  },
+  "runs": [
+    {
+      "best_val_loss": 2.1593249559402468,
+      "final_val_loss": 2.1593249559402468,
+      "seed": 1337,
+      "tokens_seen": 2457600,
+      "variant": "baseline",
+      "wall_seconds": 26.999011278152466
+    },
+    {
+      "best_val_loss": 2.174398636817932,
+      "final_val_loss": 2.174398636817932,
+      "seed": 2027,
+      "tokens_seen": 2457600,
+      "variant": "baseline",
+      "wall_seconds": 22.655893325805664
+    },
+    {
+      "best_val_loss": 2.1843415101369223,
+      "final_val_loss": 2.1843415101369223,
+      "seed": 1337,
+      "tokens_seen": 2457600,
+      "variant": "horn",
+      "wall_seconds": 29.02116584777832
+    },
+    {
+      "best_val_loss": 2.171807797749837,
+      "final_val_loss": 2.171807797749837,
+      "seed": 2027,
+      "tokens_seen": 2457600,
+      "variant": "horn",
+      "wall_seconds": 22.4131817817688
+    }
+  ],
+  "summary": {
+    "baseline": {
+      "best_val_loss_mean": 2.1668617963790897,
+      "final_val_loss_mean": 2.1668617963790897,
+      "final_val_loss_std": 0.007536840438842729,
+      "n_runs": 2,
+      "wall_seconds_mean": 24.827452301979065
+    },
+    "delta_final_vs_baseline": 0.011212857564290246,
+    "horn": {
+      "best_val_loss_mean": 2.17807465394338,
+      "final_val_loss_mean": 2.17807465394338,
+      "final_val_loss_std": 0.006266856193542614,
+      "n_runs": 2,
+      "wall_seconds_mean": 25.71717381477356
+    },
+    "relative_improvement_final_pct": -0.517469899696758
+  },
+  "verification": {
+    "dataset_matches": true,
+    "not_tinyshakespeare": true,
+    "source_matches": true
+  },
+  "winner": "baseline"
+}

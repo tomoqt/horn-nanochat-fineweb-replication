@@ -1,0 +1,33 @@
+{
+  "generated_on": "2026-04-01",
+  "node_to_bundle": {
+    "14c6d442-4846-5f3f-9f26-bf878ff563bf": [
+      "scaling_runs/repro/bundles/root_scaling_repro_bundle.tar.gz",
+      "scaling_runs/repro/bundles/full_graph_repro_bundle.tar.gz",
+      "scaling_runs/repro/REPRODUCE.md",
+      "scaling_runs/repro/replication_manifest.json",
+      "scaling_runs/repro/checksums.sha256",
+      "scaling_runs/repro/bundles.sha256",
+      "scaling_runs/repro/component_bundles.sha256"
+    ],
+    "72f74c83-265e-5bd3-bea7-d10b5ed72d12": [
+      "scaling_runs/repro/bundles/model_branch_repro_bundle.tar.gz"
+    ],
+    "f8f939dd-096f-57f1-8a2c-bd507ecb1b08": [
+      "scaling_runs/repro/bundles/horizon_branch_repro_bundle.tar.gz"
+    ],
+    "502fe30b-fefc-5ea0-a6b5-ba448941cabf": [
+      "scaling_runs/repro/bundles/synthesis_repro_bundle.tar.gz"
+    ],
+    "797f2040-c59f-518c-b492-7c133f3c7a36": [
+      "scaling_runs/repro/bundles/joint_branch_repro_bundle.tar.gz"
+    ],
+    "8a3d53c5-c68c-5c4b-8a41-58a4c52f6a0c": [
+      "scaling_runs/repro/bundles/final_insight_repro_bundle.tar.gz"
+    ]
+  },
+  "reattach_under_original_horn_root": {
+    "parent": "f3c1b9cf-5904-57e5-abc7-ad8b91789f89",
+    "child": "14c6d442-4846-5f3f-9f26-bf878ff563bf"
+  }
+}

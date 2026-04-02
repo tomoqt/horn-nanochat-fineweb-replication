@@ -1,0 +1,57 @@
+device=cuda
+vocab_size=600 train_tokens=7222914 val_tokens=802547
+
+=== Run 1/4: variant=baseline seed=1337 ===
+[baseline] seed=1337 step=0/500 train=6.4389 val=6.4395
+[baseline] seed=1337 step=100/500 train=2.6348 val=2.6654
+[baseline] seed=1337 step=200/500 train=2.6093 val=2.6497
+[baseline] seed=1337 step=300/500 train=2.6058 val=2.6070
+[baseline] seed=1337 step=400/500 train=2.5167 val=2.5432
+[baseline] seed=1337 step=500/500 train=2.3948 val=2.4405
+
+=== Run 2/4: variant=baseline seed=2027 ===
+[baseline] seed=2027 step=0/500 train=6.4269 val=6.4287
+[baseline] seed=2027 step=100/500 train=2.6181 val=2.6972
+[baseline] seed=2027 step=200/500 train=2.5928 val=2.6399
+[baseline] seed=2027 step=300/500 train=2.5913 val=2.6059
+[baseline] seed=2027 step=400/500 train=2.5489 val=2.5604
+[baseline] seed=2027 step=500/500 train=2.4203 val=2.4588
+
+=== Run 3/4: variant=horn seed=1337 ===
+[horn] seed=1337 step=0/500 train=6.4482 val=6.4488
+[horn] seed=1337 step=100/500 train=2.6301 val=2.6612
+[horn] seed=1337 step=200/500 train=2.6054 val=2.6469
+[horn] seed=1337 step=300/500 train=2.6004 val=2.6034
+[horn] seed=1337 step=400/500 train=2.5178 val=2.5441
+[horn] seed=1337 step=500/500 train=2.4110 val=2.4543
+
+=== Run 4/4: variant=horn seed=2027 ===
+[horn] seed=2027 step=0/500 train=6.4214 val=6.4234
+[horn] seed=2027 step=100/500 train=2.6132 val=2.6891
+[horn] seed=2027 step=200/500 train=2.5895 val=2.6363
+[horn] seed=2027 step=300/500 train=2.5891 val=2.6026
+[horn] seed=2027 step=400/500 train=2.5437 val=2.5500
+[horn] seed=2027 step=500/500 train=2.4506 val=2.4843
+{
+  "baseline": {
+    "n_runs": 2,
+    "final_val_loss_mean": 2.449692666530609,
+    "final_val_loss_std": 0.009146237373351962,
+    "best_val_loss_mean": 2.449692666530609,
+    "best_val_loss_std": 0.009146237373351962,
+    "wall_seconds_mean": 20.137624144554138,
+    "delta_final_vs_baseline": 0.0,
+    "delta_best_vs_baseline": 0.0
+  },
+  "horn": {
+    "n_runs": 2,
+    "final_val_loss_mean": 2.4693105041980745,
+    "final_val_loss_std": 0.015021210908889637,
+    "best_val_loss_mean": 2.4693105041980745,
+    "best_val_loss_std": 0.015021210908889637,
+    "wall_seconds_mean": 20.86586630344391,
+    "delta_final_vs_baseline": 0.019617837667465388,
+    "delta_best_vs_baseline": 0.019617837667465388,
+    "relative_improvement_final_pct": -0.8008285257778585
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "baseline": {
+    "loss": 4.406630992889404,
+    "delta_loss_vs_baseline": 0.0,
+    "sink_first4": 0.16557173430919647,
+    "sink_last3": 0.004310402553528547
+  },
+  "reverse": {
+    "loss": 7.1671600341796875,
+    "delta_loss_vs_baseline": 2.760529041290283,
+    "sink_first4": 0.16213881969451904,
+    "sink_last3": 0.004424970597028732
+  },
+  "shift32": {
+    "loss": 4.492281913757324,
+    "delta_loss_vs_baseline": 0.08565092086791992,
+    "sink_first4": 0.16854803264141083,
+    "sink_last3": 0.004428752698004246
+  },
+  "delta_sink_first4_reverse": -0.003432914614677429,
+  "delta_sink_first4_shift32": 0.0029762983322143555
+}

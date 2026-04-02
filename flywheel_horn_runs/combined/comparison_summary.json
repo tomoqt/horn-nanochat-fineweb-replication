@@ -1,0 +1,122 @@
+{
+  "experiment_name": "Scaled NanoChat pretraining: baseline vs HORN vs m=0 ablation",
+  "config": {
+    "steps": 600,
+    "seeds": [
+      1337,
+      2027,
+      3141
+    ],
+    "batch_size": 32,
+    "block_size": 128,
+    "n_layer": 4,
+    "n_head": 4,
+    "n_embd": 128,
+    "eval_interval": 100,
+    "eval_iters": 30,
+    "device": "cuda",
+    "horn_m_init": 0.5
+  },
+  "summary": {
+    "baseline": {
+      "n_runs": 3,
+      "final_val_loss_mean": 1.1485221703847248,
+      "final_val_loss_std": 0.009564512018558239,
+      "best_val_loss_mean": 1.1485221703847248,
+      "best_val_loss_std": 0.009564512018558239,
+      "wall_seconds_mean": 24.610653479894,
+      "delta_final_vs_baseline": 0.0,
+      "relative_improvement_final_pct_vs_baseline": 0.0
+    },
+    "horn": {
+      "n_runs": 3,
+      "final_val_loss_mean": 1.134167073832618,
+      "final_val_loss_std": 0.008557122752323879,
+      "best_val_loss_mean": 1.134167073832618,
+      "best_val_loss_std": 0.008557122752323879,
+      "wall_seconds_mean": 29.32576076189677,
+      "delta_final_vs_baseline": -0.014355096552106872,
+      "relative_improvement_final_pct_vs_baseline": 1.249875441873124
+    },
+    "horn_no_momentum": {
+      "n_runs": 3,
+      "final_val_loss_mean": 1.1452201114760505,
+      "final_val_loss_std": 0.007235696656273892,
+      "best_val_loss_mean": 1.1452201114760505,
+      "best_val_loss_std": 0.007235696656273892,
+      "wall_seconds_mean": 28.807701587677002,
+      "delta_final_vs_baseline": -0.003302058908674299,
+      "relative_improvement_final_pct_vs_baseline": 0.2875050211323475
+    }
+  },
+  "pairwise_deltas": {
+    "horn_minus_baseline": -0.014355096552106872,
+    "horn_no_momentum_minus_baseline": -0.003302058908674299,
+    "horn_minus_horn_no_momentum": -0.011053037643432573
+  },
+  "seed_rows": [
+    {
+      "variant": "baseline",
+      "seed": 1337,
+      "final_val_loss": 1.1374922037124633,
+      "best_val_loss": 1.1374922037124633,
+      "wall_seconds": 27.74501132965088
+    },
+    {
+      "variant": "baseline",
+      "seed": 2027,
+      "final_val_loss": 1.1472566882769266,
+      "best_val_loss": 1.1472566882769266,
+      "wall_seconds": 19.466696739196777
+    },
+    {
+      "variant": "baseline",
+      "seed": 3141,
+      "final_val_loss": 1.1608176191647848,
+      "best_val_loss": 1.1608176191647848,
+      "wall_seconds": 26.62025237083435
+    },
+    {
+      "variant": "horn",
+      "seed": 1337,
+      "final_val_loss": 1.1304051677385967,
+      "best_val_loss": 1.1304051677385967,
+      "wall_seconds": 30.52751612663269
+    },
+    {
+      "variant": "horn",
+      "seed": 2027,
+      "final_val_loss": 1.146009079615275,
+      "best_val_loss": 1.146009079615275,
+      "wall_seconds": 29.436245918273926
+    },
+    {
+      "variant": "horn",
+      "seed": 3141,
+      "final_val_loss": 1.1260869741439818,
+      "best_val_loss": 1.1260869741439818,
+      "wall_seconds": 28.01352024078369
+    },
+    {
+      "variant": "horn_no_momentum",
+      "seed": 1337,
+      "final_val_loss": 1.135871418317159,
+      "best_val_loss": 1.135871418317159,
+      "wall_seconds": 30.742693424224854
+    },
+    {
+      "variant": "horn_no_momentum",
+      "seed": 2027,
+      "final_val_loss": 1.1462910691897075,
+      "best_val_loss": 1.1462910691897075,
+      "wall_seconds": 28.3742995262146
+    },
+    {
+      "variant": "horn_no_momentum",
+      "seed": 3141,
+      "final_val_loss": 1.153497846921285,
+      "best_val_loss": 1.153497846921285,
+      "wall_seconds": 27.306111812591553
+    }
+  ]
+}

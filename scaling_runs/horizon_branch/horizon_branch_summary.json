@@ -1,0 +1,60 @@
+{
+  "experiment_name": "token_horizon_scaling_horn_nanochat",
+  "dataset": "fineweb",
+  "dataset_verification_passed": true,
+  "verification_evidence": [
+    "horizon_128: dataset=fineweb dataset_source=hf:HuggingFaceFW/fineweb/sample-10BT data_path=/workspace/data/fineweb_sample.txt",
+    "horizon_256: dataset=fineweb dataset_source=cache:/workspace/data/fineweb_sample.txt data_path=/workspace/data/fineweb_sample.txt",
+    "horizon_384: dataset=fineweb dataset_source=cache:/workspace/data/fineweb_sample.txt data_path=/workspace/data/fineweb_sample.txt"
+  ],
+  "lease_id": "36342377-9b2d-4892-a414-0fc4aaad0706",
+  "cuda_verified": true,
+  "cuda_evidence": "torch.cuda.is_available()=True; tensor op produced 2.0",
+  "best_horn_horizon": "horizon_128",
+  "best_horn_block_size": 128,
+  "best_horn_final_val_loss_mean": 2.2262328565120697,
+  "horizons": [
+    {
+      "name": "horizon_128",
+      "block_size": 128,
+      "batch_size": 32,
+      "dataset": "fineweb",
+      "dataset_source": "hf:HuggingFaceFW/fineweb/sample-10BT",
+      "data_path": "/workspace/data/fineweb_sample.txt",
+      "baseline_final_val_loss_mean": 2.2256582200527193,
+      "horn_final_val_loss_mean": 2.2262328565120697,
+      "horn_delta_final_vs_baseline": 0.0005746364593504083,
+      "horn_relative_improvement_final_pct": -0.025818719791433065,
+      "baseline_wall_seconds_mean": 21.51829981803894,
+      "horn_wall_seconds_mean": 21.514606595039368
+    },
+    {
+      "name": "horizon_256",
+      "block_size": 256,
+      "batch_size": 16,
+      "dataset": "fineweb",
+      "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+      "data_path": "/workspace/data/fineweb_sample.txt",
+      "baseline_final_val_loss_mean": 2.449692666530609,
+      "horn_final_val_loss_mean": 2.4693105041980745,
+      "horn_delta_final_vs_baseline": 0.019617837667465388,
+      "horn_relative_improvement_final_pct": -0.8008285257778585,
+      "baseline_wall_seconds_mean": 20.137624144554138,
+      "horn_wall_seconds_mean": 20.86586630344391
+    },
+    {
+      "name": "horizon_384",
+      "block_size": 384,
+      "batch_size": 11,
+      "dataset": "fineweb",
+      "dataset_source": "cache:/workspace/data/fineweb_sample.txt",
+      "data_path": "/workspace/data/fineweb_sample.txt",
+      "baseline_final_val_loss_mean": 2.596056067943573,
+      "horn_final_val_loss_mean": 2.5952972769737244,
+      "horn_delta_final_vs_baseline": -0.000758790969848544,
+      "horn_relative_improvement_final_pct": 0.02922860485249877,
+      "baseline_wall_seconds_mean": 20.82867193222046,
+      "horn_wall_seconds_mean": 21.824045181274414
+    }
+  ]
+}

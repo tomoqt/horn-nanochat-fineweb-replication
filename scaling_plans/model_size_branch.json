@@ -1,0 +1,41 @@
+{
+  "experiment_name": "horn_model_size_scaling_fixed_horizon",
+  "script": "/Users/tensorqt/Downloads/paper replication/horn_nanochat_benchmark.py",
+  "fixed_hyperparams": {
+    "block_size": 128,
+    "steps": 500,
+    "eval_interval": 100,
+    "eval_iters": 20,
+    "seeds": [1337, 2027],
+    "horn_m_init": 0.5
+  },
+  "branches": [
+    {
+      "size": "small",
+      "exp_name": "small_fixed_horizon",
+      "n_layer": 2,
+      "n_head": 2,
+      "n_embd": 64,
+      "batch_size": 32,
+      "variants": ["baseline", "horn"]
+    },
+    {
+      "size": "medium",
+      "exp_name": "medium_fixed_horizon",
+      "n_layer": 4,
+      "n_head": 4,
+      "n_embd": 128,
+      "batch_size": 24,
+      "variants": ["baseline", "horn"]
+    },
+    {
+      "size": "large",
+      "exp_name": "large_fixed_horizon",
+      "n_layer": 6,
+      "n_head": 8,
+      "n_embd": 192,
+      "batch_size": 12,
+      "variants": ["baseline", "horn"]
+    }
+  ]
+}

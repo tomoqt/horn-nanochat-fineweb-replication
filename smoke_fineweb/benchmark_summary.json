@@ -1,0 +1,262 @@
+{
+  "config": {
+    "variants": [
+      "baseline",
+      "horn",
+      "horn_no_momentum"
+    ],
+    "seeds": [
+      1337,
+      2027
+    ],
+    "steps": 2,
+    "eval_interval": 1,
+    "eval_iters": 1,
+    "batch_size": 2,
+    "block_size": 32,
+    "n_layer": 1,
+    "n_head": 1,
+    "n_embd": 16,
+    "dropout": 0.0,
+    "lr": 0.002,
+    "weight_decay": 0.01,
+    "grad_clip": 1.0,
+    "horn_m_init": 0.0,
+    "horn_eta_init": 1.0,
+    "device": "mps",
+    "dataset": "fineweb",
+    "dataset_source": "hf:HuggingFaceFW/fineweb/sample-10BT",
+    "data_path": "data/fineweb_sample.txt",
+    "is_chat_like_dataset": false,
+    "fineweb_target_chars": 50000,
+    "fineweb_max_docs": 200
+  },
+  "summary": {
+    "baseline": {
+      "n_runs": 2,
+      "final_val_loss_mean": 4.555792331695557,
+      "final_val_loss_std": 0.01952981948852539,
+      "best_val_loss_mean": 4.555792331695557,
+      "best_val_loss_std": 0.01952981948852539,
+      "wall_seconds_mean": 0.5166419744491577,
+      "delta_final_vs_baseline": 0.0,
+      "delta_best_vs_baseline": 0.0
+    },
+    "horn": {
+      "n_runs": 2,
+      "final_val_loss_mean": 4.555772304534912,
+      "final_val_loss_std": 0.019549846649169922,
+      "best_val_loss_mean": 4.555772304534912,
+      "best_val_loss_std": 0.019549846649169922,
+      "wall_seconds_mean": 0.10870957374572754,
+      "delta_final_vs_baseline": -2.002716064453125e-05,
+      "delta_best_vs_baseline": -2.002716064453125e-05,
+      "relative_improvement_final_pct": 0.00043959775131096945
+    },
+    "horn_no_momentum": {
+      "n_runs": 2,
+      "final_val_loss_mean": 4.555772304534912,
+      "final_val_loss_std": 0.019549846649169922,
+      "best_val_loss_mean": 4.555772304534912,
+      "best_val_loss_std": 0.019549846649169922,
+      "wall_seconds_mean": 0.040171146392822266,
+      "delta_final_vs_baseline": -2.002716064453125e-05,
+      "delta_best_vs_baseline": -2.002716064453125e-05,
+      "relative_improvement_final_pct": 0.00043959775131096945
+    }
+  },
+  "runs": [
+    {
+      "variant": "baseline",
+      "seed": 1337,
+      "train_losses": [
+        4.616608619689941,
+        4.603964328765869,
+        4.582118988037109
+      ],
+      "val_steps": [
+        0,
+        1,
+        2
+      ],
+      "val_losses": [
+        4.604209899902344,
+        4.59775972366333,
+        4.575322151184082
+      ],
+      "horn_m_mean": [],
+      "horn_eta_mean": [],
+      "horn_v_rms": [],
+      "final_val_loss": 4.575322151184082,
+      "best_val_loss": 4.575322151184082,
+      "wall_seconds": 1.008958101272583,
+      "tokens_seen": 128
+    },
+    {
+      "variant": "baseline",
+      "seed": 2027,
+      "train_losses": [
+        4.6172685623168945,
+        4.573802947998047,
+        4.536989212036133
+      ],
+      "val_steps": [
+        0,
+        1,
+        2
+      ],
+      "val_losses": [
+        4.604635238647461,
+        4.560125350952148,
+        4.536262512207031
+      ],
+      "horn_m_mean": [],
+      "horn_eta_mean": [],
+      "horn_v_rms": [],
+      "final_val_loss": 4.536262512207031,
+      "best_val_loss": 4.536262512207031,
+      "wall_seconds": 0.024325847625732422,
+      "tokens_seen": 128
+    },
+    {
+      "variant": "horn",
+      "seed": 1337,
+      "train_losses": [
+        4.616608619689941,
+        4.603968620300293,
+        4.582113265991211
+      ],
+      "val_steps": [
+        0,
+        1,
+        2
+      ],
+      "val_losses": [
+        4.604209899902344,
+        4.5977582931518555,
+        4.575322151184082
+      ],
+      "horn_m_mean": [
+        9.99999883788405e-06,
+        1.0002306225942448e-05
+      ],
+      "horn_eta_mean": [
+        0.9999998807907104,
+        0.9998356699943542
+      ],
+      "horn_v_rms": [
+        0.007107263430953026,
+        0.009498920291662216
+      ],
+      "final_val_loss": 4.575322151184082,
+      "best_val_loss": 4.575322151184082,
+      "wall_seconds": 0.18943119049072266,
+      "tokens_seen": 128
+    },
+    {
+      "variant": "horn",
+      "seed": 2027,
+      "train_losses": [
+        4.6172685623168945,
+        4.573788166046143,
+        4.536951065063477
+      ],
+      "val_steps": [
+        0,
+        1,
+        2
+      ],
+      "val_losses": [
+        4.604635238647461,
+        4.560118198394775,
+        4.536222457885742
+      ],
+      "horn_m_mean": [
+        9.99999883788405e-06,
+        1.0002306225942448e-05
+      ],
+      "horn_eta_mean": [
+        0.9999998807907104,
+        1.0001516342163086
+      ],
+      "horn_v_rms": [
+        0.00800670962780714,
+        0.010745377279818058
+      ],
+      "final_val_loss": 4.536222457885742,
+      "best_val_loss": 4.536222457885742,
+      "wall_seconds": 0.027987957000732422,
+      "tokens_seen": 128
+    },
+    {
+      "variant": "horn_no_momentum",
+      "seed": 1337,
+      "train_losses": [
+        4.616608619689941,
+        4.603968620300293,
+        4.582113265991211
+      ],
+      "val_steps": [
+        0,
+        1,
+        2
+      ],
+      "val_losses": [
+        4.604209899902344,
+        4.5977582931518555,
+        4.575322151184082
+      ],
+      "horn_m_mean": [
+        0.0,
+        0.0
+      ],
+      "horn_eta_mean": [
+        0.9999998807907104,
+        0.9998356699943542
+      ],
+      "horn_v_rms": [
+        0.007107263430953026,
+        0.009498920291662216
+      ],
+      "final_val_loss": 4.575322151184082,
+      "best_val_loss": 4.575322151184082,
+      "wall_seconds": 0.052918195724487305,
+      "tokens_seen": 128
+    },
+    {
+      "variant": "horn_no_momentum",
+      "seed": 2027,
+      "train_losses": [
+        4.6172685623168945,
+        4.573788166046143,
+        4.536951065063477
+      ],
+      "val_steps": [
+        0,
+        1,
+        2
+      ],
+      "val_losses": [
+        4.604635238647461,
+        4.560118198394775,
+        4.536222457885742
+      ],
+      "horn_m_mean": [
+        0.0,
+        0.0
+      ],
+      "horn_eta_mean": [
+        0.9999998807907104,
+        1.0001516342163086
+      ],
+      "horn_v_rms": [
+        0.00800670962780714,
+        0.010745377279818058
+      ],
+      "final_val_loss": 4.536222457885742,
+      "best_val_loss": 4.536222457885742,
+      "wall_seconds": 0.027424097061157227,
+      "tokens_seen": 128
+    }
+  ]
+}

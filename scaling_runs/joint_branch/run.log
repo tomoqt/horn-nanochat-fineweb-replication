@@ -1,0 +1,68 @@
+Running joint scaling config:
+  n_layer=4 n_head=4 n_embd=128 block_size=128 batch_size=32
+  steps=600 eval_interval=100 eval_iters=30 seeds=1337 2027
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+device=cuda
+vocab_size=600 train_tokens=7222914 val_tokens=802547
+
+=== Run 1/4: variant=baseline seed=1337 ===
+[baseline] seed=1337 step=0/600 train=6.4609 val=6.4608
+[baseline] seed=1337 step=100/600 train=2.6260 val=2.6831
+[baseline] seed=1337 step=200/600 train=2.5858 val=2.6112
+[baseline] seed=1337 step=300/600 train=2.4387 val=2.4500
+[baseline] seed=1337 step=400/600 train=2.2873 val=2.3163
+[baseline] seed=1337 step=500/600 train=2.1943 val=2.2340
+[baseline] seed=1337 step=600/600 train=2.1384 val=2.1593
+
+=== Run 2/4: variant=baseline seed=2027 ===
+[baseline] seed=2027 step=0/600 train=6.4362 val=6.4351
+[baseline] seed=2027 step=100/600 train=2.6141 val=2.6725
+[baseline] seed=2027 step=200/600 train=2.5406 val=2.5723
+[baseline] seed=2027 step=300/600 train=2.3882 val=2.4190
+[baseline] seed=2027 step=400/600 train=2.2943 val=2.3109
+[baseline] seed=2027 step=500/600 train=2.2110 val=2.2547
+[baseline] seed=2027 step=600/600 train=2.1355 val=2.1744
+
+=== Run 3/4: variant=horn seed=1337 ===
+[horn] seed=1337 step=0/600 train=6.4596 val=6.4596
+[horn] seed=1337 step=100/600 train=2.6092 val=2.6654
+[horn] seed=1337 step=200/600 train=2.5773 val=2.6042
+[horn] seed=1337 step=300/600 train=2.4269 val=2.4322
+[horn] seed=1337 step=400/600 train=2.2840 val=2.3154
+[horn] seed=1337 step=500/600 train=2.2100 val=2.2469
+[horn] seed=1337 step=600/600 train=2.1650 val=2.1843
+
+=== Run 4/4: variant=horn seed=2027 ===
+[horn] seed=2027 step=0/600 train=6.4366 val=6.4356
+[horn] seed=2027 step=100/600 train=2.6048 val=2.6644
+[horn] seed=2027 step=200/600 train=2.5648 val=2.5962
+[horn] seed=2027 step=300/600 train=2.4053 val=2.4342
+[horn] seed=2027 step=400/600 train=2.3023 val=2.3184
+[horn] seed=2027 step=500/600 train=2.2074 val=2.2589
+[horn] seed=2027 step=600/600 train=2.1345 val=2.1718
+{
+  "baseline": {
+    "n_runs": 2,
+    "final_val_loss_mean": 2.1668617963790897,
+    "final_val_loss_std": 0.007536840438842729,
+    "best_val_loss_mean": 2.1668617963790897,
+    "best_val_loss_std": 0.007536840438842729,
+    "wall_seconds_mean": 24.827452301979065,
+    "delta_final_vs_baseline": 0.0,
+    "delta_best_vs_baseline": 0.0
+  },
+  "horn": {
+    "n_runs": 2,
+    "final_val_loss_mean": 2.17807465394338,
+    "final_val_loss_std": 0.006266856193542614,
+    "best_val_loss_mean": 2.17807465394338,
+    "best_val_loss_std": 0.006266856193542614,
+    "wall_seconds_mean": 25.71717381477356,
+    "delta_final_vs_baseline": 0.011212857564290246,
+    "delta_best_vs_baseline": 0.011212857564290246,
+    "relative_improvement_final_pct": -0.517469899696758
+  }
+}
+Joint scaling run complete.
+  summary: /workspace/scaling/joint/joint_scaled_from_branch_winners/benchmark_summary.json
+  log:     /workspace/scaling/joint/joint_scaled_from_branch_winners.log

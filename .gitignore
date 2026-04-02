@@ -1,0 +1,8 @@
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local dataset caches; experiments should regenerate from FineWeb.
+data/

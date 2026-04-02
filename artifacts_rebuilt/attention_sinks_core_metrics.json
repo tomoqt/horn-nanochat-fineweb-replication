@@ -1,0 +1,51 @@
+{
+  "model_name": "EleutherAI/pythia-70m-deduped",
+  "seq_len": 128,
+  "batch_size": 8,
+  "num_sequences": 48,
+  "seed": 1337,
+  "conditions": {
+    "baseline": {
+      "loss": 4.406630992889404,
+      "delta_loss_vs_baseline": 0.0,
+      "sink_first4": 0.16557173430919647,
+      "sink_last3": 0.004310402553528547
+    },
+    "shuffled": {
+      "loss": 8.050933837890625,
+      "delta_loss_vs_baseline": 3.6443028450012207,
+      "sink_first4": 0.16243807971477509,
+      "sink_last3": 0.004382400773465633
+    },
+    "reverse": {
+      "loss": 7.1671600341796875,
+      "delta_loss_vs_baseline": 2.760529041290283,
+      "sink_first4": 0.16213881969451904,
+      "sink_last3": 0.004424970597028732
+    },
+    "shift32": {
+      "loss": 4.492281913757324,
+      "delta_loss_vs_baseline": 0.08565092086791992,
+      "sink_first4": 0.16854803264141083,
+      "sink_last3": 0.004428752698004246
+    },
+    "mask_first4": {
+      "loss": 32.855316162109375,
+      "delta_loss_vs_baseline": 28.44868516921997,
+      "sink_first4": 0.11023357510566711,
+      "sink_last3": 0.004315795376896858
+    },
+    "mask_random4": {
+      "loss": 42.424434661865234,
+      "delta_loss_vs_baseline": 38.01780366897583,
+      "sink_first4": 0.1598951518535614,
+      "sink_last3": 0.004388698376715183
+    },
+    "swap_pos0": {
+      "loss": 4.538687229156494,
+      "delta_loss_vs_baseline": 0.13205623626708984,
+      "sink_first4": 0.16062971949577332,
+      "sink_last3": 0.004307924769818783
+    }
+  }
+}

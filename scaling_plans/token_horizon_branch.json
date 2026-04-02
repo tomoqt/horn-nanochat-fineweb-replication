@@ -1,0 +1,46 @@
+{
+  "experiment_name": "token_horizon_scaling_horn_nanochat",
+  "target_tokens_per_step": 4096,
+  "fixed_model": {
+    "n_layer": 4,
+    "n_head": 4,
+    "n_embd": 128,
+    "block_size": 128,
+    "dropout": 0.0
+  },
+  "shared_training": {
+    "variants": ["baseline", "horn"],
+    "seeds": [1337, 2027],
+    "steps": 500,
+    "eval_interval": 100,
+    "eval_iters": 20,
+    "horn_m_init": 0.5
+  },
+  "branches": [
+    {
+      "name": "horizon_128",
+      "block_size": 128,
+      "batch_size": 32,
+      "tokens_per_step": 4096,
+      "outdir_name": "horizon_128"
+    },
+    {
+      "name": "horizon_256",
+      "block_size": 256,
+      "batch_size": 16,
+      "tokens_per_step": 4096,
+      "outdir_name": "horizon_256"
+    },
+    {
+      "name": "horizon_384",
+      "block_size": 384,
+      "batch_size": 11,
+      "tokens_per_step": 4224,
+      "outdir_name": "horizon_384"
+    }
+  ],
+  "follow_up": {
+    "status": "pending",
+    "description": "After branch results are available, select the best horizon trend and run a joint model+horizon scaling comparison."
+  }
+}

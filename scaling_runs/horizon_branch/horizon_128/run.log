@@ -1,0 +1,58 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+device=cuda
+vocab_size=600 train_tokens=7222914 val_tokens=802547
+
+=== Run 1/4: variant=baseline seed=1337 ===
+[baseline] seed=1337 step=0/500 train=6.4610 val=6.4613
+[baseline] seed=1337 step=100/500 train=2.6236 val=2.6579
+[baseline] seed=1337 step=200/500 train=2.5572 val=2.5971
+[baseline] seed=1337 step=300/500 train=2.4036 val=2.4220
+[baseline] seed=1337 step=400/500 train=2.2920 val=2.3014
+[baseline] seed=1337 step=500/500 train=2.1860 val=2.2163
+
+=== Run 2/4: variant=baseline seed=2027 ===
+[baseline] seed=2027 step=0/500 train=6.4364 val=6.4353
+[baseline] seed=2027 step=100/500 train=2.6308 val=2.6564
+[baseline] seed=2027 step=200/500 train=2.5766 val=2.6084
+[baseline] seed=2027 step=300/500 train=2.4410 val=2.4489
+[baseline] seed=2027 step=400/500 train=2.2903 val=2.3112
+[baseline] seed=2027 step=500/500 train=2.1979 val=2.2350
+
+=== Run 3/4: variant=horn seed=1337 ===
+[horn] seed=1337 step=0/500 train=6.4597 val=6.4605
+[horn] seed=1337 step=100/500 train=2.6219 val=2.6562
+[horn] seed=1337 step=200/500 train=2.5703 val=2.6099
+[horn] seed=1337 step=300/500 train=2.4192 val=2.4397
+[horn] seed=1337 step=400/500 train=2.3027 val=2.3146
+[horn] seed=1337 step=500/500 train=2.2042 val=2.2325
+
+=== Run 4/4: variant=horn seed=2027 ===
+[horn] seed=2027 step=0/500 train=6.4370 val=6.4356
+[horn] seed=2027 step=100/500 train=2.6202 val=2.6433
+[horn] seed=2027 step=200/500 train=2.5577 val=2.5907
+[horn] seed=2027 step=300/500 train=2.4012 val=2.4120
+[horn] seed=2027 step=400/500 train=2.2724 val=2.2918
+[horn] seed=2027 step=500/500 train=2.1841 val=2.2200
+{
+  "baseline": {
+    "n_runs": 2,
+    "final_val_loss_mean": 2.2256582200527193,
+    "final_val_loss_std": 0.009357947111129805,
+    "best_val_loss_mean": 2.2256582200527193,
+    "best_val_loss_std": 0.009357947111129805,
+    "wall_seconds_mean": 21.51829981803894,
+    "delta_final_vs_baseline": 0.0,
+    "delta_best_vs_baseline": 0.0
+  },
+  "horn": {
+    "n_runs": 2,
+    "final_val_loss_mean": 2.2262328565120697,
+    "final_val_loss_std": 0.0062264382839201105,
+    "best_val_loss_mean": 2.2262328565120697,
+    "best_val_loss_std": 0.0062264382839201105,
+    "wall_seconds_mean": 21.514606595039368,
+    "delta_final_vs_baseline": 0.0005746364593504083,
+    "delta_best_vs_baseline": 0.0005746364593504083,
+    "relative_improvement_final_pct": -0.025818719791433065
+  }
+}
