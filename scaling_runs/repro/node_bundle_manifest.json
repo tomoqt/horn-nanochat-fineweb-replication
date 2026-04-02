@@ -6,6 +6,7 @@
       "scaling_runs/repro/bundles/full_graph_repro_bundle.tar.gz",
       "scaling_runs/repro/REPRODUCE.md",
       "scaling_runs/repro/replication_manifest.json",
+      "scaling_runs/repro/flywheel_repo_link_payload.json",
       "scaling_runs/repro/checksums.sha256",
       "scaling_runs/repro/bundles.sha256",
       "scaling_runs/repro/component_bundles.sha256"

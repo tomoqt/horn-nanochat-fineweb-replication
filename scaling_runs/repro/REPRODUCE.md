@@ -121,6 +121,7 @@ python3 /workspace/scaling_runs/plots/make_extended_horizon_plot.py \
 ## Packaged Repro Artifacts
 See:
 - `scaling_runs/repro/replication_manifest.json`
+- `scaling_runs/repro/flywheel_repo_link_payload.json`
 - `scaling_runs/repro/checksums.sha256`
 - `scaling_runs/repro/component_bundles.sha256`
 - `scaling_runs/repro/bundles/*.tar.gz`

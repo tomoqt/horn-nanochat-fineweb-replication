@@ -1,0 +1,67 @@
+{
+  "repo_url": "https://github.com/tomoqt/horn-nanochat-fineweb-replication",
+  "head_commit_sha": "d1d96dbdce986e65e5df9adad408f51bb73976b0",
+  "note": "Apply these links to Flywheel node summaries/artifacts once auth is restored.",
+  "node_links": {
+    "14c6d442-4846-5f3f-9f26-bf878ff563bf": {
+      "title": "Scaling root",
+      "paths": [
+        "README.md",
+        "docs/GRAPH_NODE_INDEX.md",
+        "scaling_runs/repro/REPRODUCE.md",
+        "scaling_runs/repro/replication_manifest.json"
+      ]
+    },
+    "72f74c83-265e-5bd3-bea7-d10b5ed72d12": {
+      "title": "Model-size branch empirical",
+      "paths": [
+        "scaling_plans/model_size_branch.json",
+        "scaling_plans/run_model_size_branch.sh",
+        "scaling_runs/model_branch/model_branch_summary.json"
+      ]
+    },
+    "f8f939dd-096f-57f1-8a2c-bd507ecb1b08": {
+      "title": "Token-horizon branch empirical (128/256/384)",
+      "paths": [
+        "scaling_plans/token_horizon_branch.json",
+        "scaling_plans/run_token_horizon_branch.sh",
+        "scaling_runs/horizon_branch/horizon_branch_summary.json"
+      ]
+    },
+    "502fe30b-fefc-5ea0-a6b5-ba448941cabf": {
+      "title": "Branch synthesis insight",
+      "paths": [
+        "scaling_plans/prepare_joint_plan.py",
+        "scaling_runs/joint_branch/joint_plan.json",
+        "scaling_runs/joint_branch/joint_plan.md"
+      ]
+    },
+    "797f2040-c59f-518c-b492-7c133f3c7a36": {
+      "title": "Joint branch empirical",
+      "paths": [
+        "scaling_plans/run_joint_scaling.sh",
+        "scaling_runs/joint_branch/joint_scaled_from_branch_winners/benchmark_summary.json",
+        "scaling_runs/joint_branch/joint_branch_summary.json"
+      ]
+    },
+    "8a3d53c5-c68c-5c4b-8a41-58a4c52f6a0c": {
+      "title": "Final insight",
+      "paths": [
+        "scaling_runs/plots/model_size_val_curves.png",
+        "scaling_runs/plots/horizon_final_loss_bars.png",
+        "scaling_runs/plots/joint_val_curves.png",
+        "scaling_runs/plots/loss_plot_metrics.json"
+      ]
+    },
+    "pending_extended_horizon_node": {
+      "title": "Token horizon extension empirical (512-2048)",
+      "paths": [
+        "scaling_plans/token_horizon_extended_branch.json",
+        "scaling_plans/summarize_horizon_branch.py",
+        "scaling_runs/horizon_branch_extended/horizon_branch_summary.json",
+        "scaling_runs/horizon_branch_extended/horizon_branch_report.md",
+        "scaling_runs/plots/horizon_extended_final_loss_bars.png"
+      ]
+    }
+  }
+}
