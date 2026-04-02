@@ -9,6 +9,8 @@
       "scaling_runs/repro/checksums.sha256",
       "scaling_runs/repro/bundles.sha256",
       "scaling_runs/repro/component_bundles.sha256"
+      ,
+      "scaling_runs/repro/bundles/horizon_extended_repro_bundle.tar.gz"
     ],
     "72f74c83-265e-5bd3-bea7-d10b5ed72d12": [
       "scaling_runs/repro/bundles/model_branch_repro_bundle.tar.gz"
@@ -24,6 +26,9 @@
     ],
     "8a3d53c5-c68c-5c4b-8a41-58a4c52f6a0c": [
       "scaling_runs/repro/bundles/final_insight_repro_bundle.tar.gz"
+    ],
+    "pending_extended_horizon_node": [
+      "scaling_runs/repro/bundles/horizon_extended_repro_bundle.tar.gz"
     ]
   },
   "reattach_under_original_horn_root": {

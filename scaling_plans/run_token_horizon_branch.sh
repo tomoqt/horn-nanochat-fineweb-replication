@@ -56,16 +56,16 @@ run_branch() {
 }
 
 if command -v jq >/dev/null 2>&1; then
-  mapfile -t branch_lines < <(jq -r '.branches[] | "\(.name) \(.block_size) \(.batch_size) \(.tokens_per_step) \(.outdir_name)"' "${PLAN_JSON}")
   steps="$(jq -r '.shared_training.steps' "${PLAN_JSON}")"
   eval_interval="$(jq -r '.shared_training.eval_interval' "${PLAN_JSON}")"
   eval_iters="$(jq -r '.shared_training.eval_iters' "${PLAN_JSON}")"
   horn_m_init="$(jq -r '.shared_training.horn_m_init' "${PLAN_JSON}")"
-  for line in "${branch_lines[@]}"; do
+  while IFS= read -r line; do
+    [[ -z "${line}" ]] && continue
     read -r name block_size batch_size tokens_per_step outdir_name <<<"${line}"
     echo "planned_tokens_per_step=${tokens_per_step}"
     run_branch "${outdir_name}" "${block_size}" "${batch_size}" "${steps}" "${eval_interval}" "${eval_iters}" "${horn_m_init}"
-  done
+  done < <(jq -r '.branches[] | "\(.name) \(.block_size) \(.batch_size) \(.tokens_per_step) \(.outdir_name)"' "${PLAN_JSON}")
 else
   echo "jq not found; using hardcoded branch definitions from the plan."
   run_branch "horizon_128" 128 32 500 100 20 0.5

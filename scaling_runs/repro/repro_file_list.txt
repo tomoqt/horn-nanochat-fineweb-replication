@@ -24,3 +24,11 @@ scaling_runs/repro/REPRODUCE.md
 scaling_runs/repro/replication_manifest.json
 scaling_runs/repro/node_bundle_manifest.json
 scaling_runs/repro/component_bundles.sha256
+scaling_plans/token_horizon_extended_branch.json
+scaling_plans/summarize_horizon_branch.py
+scaling_runs/horizon_branch_extended/horizon_branch_summary.json
+scaling_runs/horizon_branch_extended/horizon_branch_report.md
+scaling_runs/horizon_branch_extended/horizon_comparison_prior_vs_extended.json
+scaling_runs/horizon_branch_extended/horizon_comparison_prior_vs_extended.md
+scaling_runs/plots/make_extended_horizon_plot.py
+scaling_runs/plots/horizon_extended_final_loss_bars.png

@@ -91,6 +91,28 @@ Expected files:
 - `scaling_runs/plots/joint_val_curves.png`
 - `scaling_runs/plots/loss_plot_metrics.json`
 
+6. Extended token-horizon sweep (beyond 384)
+```bash
+cd /workspace
+PLAN_JSON=/workspace/scaling_plans/token_horizon_extended_branch.json \
+ROOT_OUTDIR=/workspace/scaling_runs/horizon_branch_extended \
+DATASET=fineweb \
+DATA_PATH=/workspace/data/fineweb_sample_8m.txt \
+FINEWEB_TARGET_CHARS=8000000 \
+FINEWEB_MAX_DOCS=40000 \
+bash /workspace/scaling_plans/run_token_horizon_branch.sh
+
+python3 /workspace/scaling_plans/summarize_horizon_branch.py \
+  --root-outdir /workspace/scaling_runs/horizon_branch_extended \
+  --plan-json /workspace/scaling_plans/token_horizon_extended_branch.json \
+  --summary-json /workspace/scaling_runs/horizon_branch_extended/horizon_branch_summary.json \
+  --summary-md /workspace/scaling_runs/horizon_branch_extended/horizon_branch_report.md
+
+python3 /workspace/scaling_runs/plots/make_extended_horizon_plot.py \
+  --summary-json /workspace/scaling_runs/horizon_branch_extended/horizon_branch_summary.json \
+  --out-png /workspace/scaling_runs/plots/horizon_extended_final_loss_bars.png
+```
+
 ## Verification Gates
 - Every branch summary must report `dataset=fineweb`.
 - No summary may report `tinyshakespeare` dataset source.
