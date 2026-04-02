@@ -1,0 +1,44 @@
+{
+  "experiment_name": "token_horizon_5000_steps_512_2048",
+  "target_tokens_per_step": 4096,
+  "fixed_model": {
+    "n_layer": 4,
+    "n_head": 4,
+    "n_embd": 128,
+    "dropout": 0.0
+  },
+  "shared_training": {
+    "variants": [
+      "baseline",
+      "horn"
+    ],
+    "seeds": [
+      1337,
+      2027
+    ],
+    "steps": 5000,
+    "eval_interval": 500,
+    "eval_iters": 30,
+    "horn_m_init": 0.5
+  },
+  "branches": [
+    {
+      "name": "horizon_512",
+      "block_size": 512,
+      "batch_size": 8,
+      "tokens_per_step": 4096,
+      "outdir_name": "horizon_512"
+    },
+    {
+      "name": "horizon_2048",
+      "block_size": 2048,
+      "batch_size": 2,
+      "tokens_per_step": 4096,
+      "outdir_name": "horizon_2048"
+    }
+  ],
+  "follow_up": {
+    "status": "pending",
+    "description": "Long-duration follow-up at 5000 steps for high token horizons to test whether longer optimization stabilizes or amplifies HORN advantages."
+  }
+}
