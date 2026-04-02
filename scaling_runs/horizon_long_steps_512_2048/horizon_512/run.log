@@ -1,0 +1,63 @@
+device=mps
+vocab_size=600 train_tokens=7222914 val_tokens=802547
+
+=== Run 1/4: variant=baseline seed=1337 ===
+/Users/tensorqt/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[baseline] seed=1337 step=0/1200 train=6.4178 val=6.4217
+[baseline] seed=1337 step=200/1200 train=2.6174 val=2.6431
+[baseline] seed=1337 step=400/1200 train=2.5927 val=2.6084
+[baseline] seed=1337 step=600/1200 train=2.5729 val=2.6047
+[baseline] seed=1337 step=800/1200 train=2.5689 val=2.5891
+[baseline] seed=1337 step=1000/1200 train=2.4924 val=2.5240
+[baseline] seed=1337 step=1200/1200 train=2.3751 val=2.3766
+
+=== Run 2/4: variant=baseline seed=2027 ===
+[baseline] seed=2027 step=0/1200 train=6.4114 val=6.4092
+[baseline] seed=2027 step=200/1200 train=2.6114 val=2.6357
+[baseline] seed=2027 step=400/1200 train=2.5839 val=2.6119
+[baseline] seed=2027 step=600/1200 train=2.5819 val=2.6177
+[baseline] seed=2027 step=800/1200 train=2.5576 val=2.5745
+[baseline] seed=2027 step=1000/1200 train=2.4178 val=2.4410
+[baseline] seed=2027 step=1200/1200 train=2.2662 val=2.3076
+
+=== Run 3/4: variant=horn seed=1337 ===
+[horn] seed=1337 step=0/1200 train=6.4042 val=6.4078
+[horn] seed=1337 step=200/1200 train=2.6133 val=2.6388
+[horn] seed=1337 step=400/1200 train=2.5911 val=2.6061
+[horn] seed=1337 step=600/1200 train=2.5698 val=2.6017
+[horn] seed=1337 step=800/1200 train=2.5630 val=2.5825
+[horn] seed=1337 step=1000/1200 train=2.4952 val=2.5310
+[horn] seed=1337 step=1200/1200 train=2.4016 val=2.4008
+
+=== Run 4/4: variant=horn seed=2027 ===
+[horn] seed=2027 step=0/1200 train=6.4050 val=6.4022
+[horn] seed=2027 step=200/1200 train=2.6103 val=2.6347
+[horn] seed=2027 step=400/1200 train=2.5829 val=2.6100
+[horn] seed=2027 step=600/1200 train=2.5780 val=2.6145
+[horn] seed=2027 step=800/1200 train=2.5537 val=2.5714
+[horn] seed=2027 step=1000/1200 train=2.4436 val=2.4666
+[horn] seed=2027 step=1200/1200 train=2.3146 val=2.3535
+{
+  "baseline": {
+    "n_runs": 2,
+    "final_val_loss_mean": 2.342136295636495,
+    "final_val_loss_std": 0.03449971675872798,
+    "best_val_loss_mean": 2.342136295636495,
+    "best_val_loss_std": 0.03449971675872798,
+    "wall_seconds_mean": 77.15799498558044,
+    "delta_final_vs_baseline": 0.0,
+    "delta_best_vs_baseline": 0.0
+  },
+  "horn": {
+    "n_runs": 2,
+    "final_val_loss_mean": 2.3771363615989687,
+    "final_val_loss_std": 0.02364902098973576,
+    "best_val_loss_mean": 2.3771363615989687,
+    "best_val_loss_std": 0.02364902098973576,
+    "wall_seconds_mean": 84.54508447647095,
+    "delta_final_vs_baseline": 0.03500006596247385,
+    "delta_best_vs_baseline": 0.03500006596247385,
+    "relative_improvement_final_pct": -1.4943650387759475
+  }
+}

@@ -45,3 +45,15 @@ Public repo: [tomoqt/horn-nanochat-fineweb-replication](https://github.com/tomoq
   - [scaling_runs/plots/horizon_extended_final_loss_bars.png](https://github.com/tomoqt/horn-nanochat-fineweb-replication/blob/main/scaling_runs/plots/horizon_extended_final_loss_bars.png)
 
 If a new Flywheel node is created for this extended sweep, add its node ID here and include these paths in that node's artifacts/summary. The intended parent is the prior horizon node `f8f939dd-096f-57f1-8a2c-bd507ecb1b08`.
+
+## New Long-Step Follow-Up (1200 Steps)
+- Plan/config:
+  - [scaling_plans/token_horizon_long_steps_512_2048.json](https://github.com/tomoqt/horn-nanochat-fineweb-replication/blob/main/scaling_plans/token_horizon_long_steps_512_2048.json)
+- Result paths:
+  - [scaling_runs/horizon_long_steps_512_2048/](https://github.com/tomoqt/horn-nanochat-fineweb-replication/tree/main/scaling_runs/horizon_long_steps_512_2048)
+  - [scaling_runs/horizon_long_steps_512_2048/horizon_branch_summary.json](https://github.com/tomoqt/horn-nanochat-fineweb-replication/blob/main/scaling_runs/horizon_long_steps_512_2048/horizon_branch_summary.json)
+  - [scaling_runs/horizon_long_steps_512_2048/horizon_branch_report.md](https://github.com/tomoqt/horn-nanochat-fineweb-replication/blob/main/scaling_runs/horizon_long_steps_512_2048/horizon_branch_report.md)
+  - [scaling_runs/horizon_long_steps_512_2048/horizon_600_vs_1200_comparison.md](https://github.com/tomoqt/horn-nanochat-fineweb-replication/blob/main/scaling_runs/horizon_long_steps_512_2048/horizon_600_vs_1200_comparison.md)
+  - [scaling_runs/plots/horizon_long_steps_512_2048_bars.png](https://github.com/tomoqt/horn-nanochat-fineweb-replication/blob/main/scaling_runs/plots/horizon_long_steps_512_2048_bars.png)
+
+If a Flywheel node is created for this long-step run, parent it from the extended-horizon empirical node and include these artifacts plus `run.log`.

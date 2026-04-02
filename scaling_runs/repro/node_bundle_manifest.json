@@ -1,5 +1,5 @@
 {
-  "generated_on": "2026-04-01",
+  "generated_on": "2026-04-02",
   "node_to_bundle": {
     "14c6d442-4846-5f3f-9f26-bf878ff563bf": [
       "scaling_runs/repro/bundles/root_scaling_repro_bundle.tar.gz",
@@ -9,9 +9,9 @@
       "scaling_runs/repro/flywheel_repo_link_payload.json",
       "scaling_runs/repro/checksums.sha256",
       "scaling_runs/repro/bundles.sha256",
-      "scaling_runs/repro/component_bundles.sha256"
-      ,
-      "scaling_runs/repro/bundles/horizon_extended_repro_bundle.tar.gz"
+      "scaling_runs/repro/component_bundles.sha256",
+      "scaling_runs/repro/bundles/horizon_extended_repro_bundle.tar.gz",
+      "scaling_runs/repro/bundles/horizon_long_steps_512_2048_repro_bundle.tar.gz"
     ],
     "72f74c83-265e-5bd3-bea7-d10b5ed72d12": [
       "scaling_runs/repro/bundles/model_branch_repro_bundle.tar.gz"
@@ -30,6 +30,9 @@
     ],
     "pending_extended_horizon_node": [
       "scaling_runs/repro/bundles/horizon_extended_repro_bundle.tar.gz"
+    ],
+    "pending_long_steps_horizon_node": [
+      "scaling_runs/repro/bundles/horizon_long_steps_512_2048_repro_bundle.tar.gz"
     ]
   },
   "reattach_under_original_horn_root": {

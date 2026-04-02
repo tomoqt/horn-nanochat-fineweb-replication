@@ -113,6 +113,28 @@ python3 /workspace/scaling_runs/plots/make_extended_horizon_plot.py \
   --out-png /workspace/scaling_runs/plots/horizon_extended_final_loss_bars.png
 ```
 
+7. Long-step follow-up (1200 steps on 512 and 2048)
+```bash
+cd /workspace
+PLAN_JSON=/workspace/scaling_plans/token_horizon_long_steps_512_2048.json \
+ROOT_OUTDIR=/workspace/scaling_runs/horizon_long_steps_512_2048 \
+DATASET=fineweb \
+DATA_PATH=/workspace/data/fineweb_sample_8m.txt \
+FINEWEB_TARGET_CHARS=8000000 \
+FINEWEB_MAX_DOCS=40000 \
+bash /workspace/scaling_plans/run_token_horizon_branch.sh
+
+python3 /workspace/scaling_plans/summarize_horizon_branch.py \
+  --root-outdir /workspace/scaling_runs/horizon_long_steps_512_2048 \
+  --plan-json /workspace/scaling_plans/token_horizon_long_steps_512_2048.json \
+  --summary-json /workspace/scaling_runs/horizon_long_steps_512_2048/horizon_branch_summary.json \
+  --summary-md /workspace/scaling_runs/horizon_long_steps_512_2048/horizon_branch_report.md
+
+python3 /workspace/scaling_runs/plots/make_extended_horizon_plot.py \
+  --summary-json /workspace/scaling_runs/horizon_long_steps_512_2048/horizon_branch_summary.json \
+  --out-png /workspace/scaling_runs/plots/horizon_long_steps_512_2048_bars.png
+```
+
 ## Verification Gates
 - Every branch summary must report `dataset=fineweb`.
 - No summary may report `tinyshakespeare` dataset source.

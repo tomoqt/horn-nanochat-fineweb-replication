@@ -1,0 +1,46 @@
+{
+  "experiment_name": "token_horizon_long_steps_512_2048",
+  "dataset": "fineweb",
+  "dataset_verification_passed": true,
+  "verification_evidence": [
+    "horizon_512: dataset=fineweb dataset_source=cache:/Users/tensorqt/Downloads/paper replication/data/fineweb_sample_8m.txt data_path=/Users/tensorqt/Downloads/paper replication/data/fineweb_sample_8m.txt",
+    "horizon_2048: dataset=fineweb dataset_source=cache:/Users/tensorqt/Downloads/paper replication/data/fineweb_sample_8m.txt data_path=/Users/tensorqt/Downloads/paper replication/data/fineweb_sample_8m.txt"
+  ],
+  "horizons": [
+    {
+      "name": "horizon_512",
+      "block_size": 512,
+      "batch_size": 8,
+      "tokens_per_step": 4096,
+      "dataset": "fineweb",
+      "dataset_source": "cache:/Users/tensorqt/Downloads/paper replication/data/fineweb_sample_8m.txt",
+      "data_path": "/Users/tensorqt/Downloads/paper replication/data/fineweb_sample_8m.txt",
+      "baseline_final_val_loss_mean": 2.342136295636495,
+      "horn_final_val_loss_mean": 2.3771363615989687,
+      "horn_delta_final_vs_baseline": 0.03500006596247385,
+      "horn_relative_improvement_final_pct": -1.4943650387759475,
+      "baseline_wall_seconds_mean": 77.15799498558044,
+      "horn_wall_seconds_mean": 84.54508447647095
+    },
+    {
+      "name": "horizon_2048",
+      "block_size": 2048,
+      "batch_size": 2,
+      "tokens_per_step": 4096,
+      "dataset": "fineweb",
+      "dataset_source": "cache:/Users/tensorqt/Downloads/paper replication/data/fineweb_sample_8m.txt",
+      "data_path": "/Users/tensorqt/Downloads/paper replication/data/fineweb_sample_8m.txt",
+      "baseline_final_val_loss_mean": 2.60447283188502,
+      "horn_final_val_loss_mean": 2.6029355049133303,
+      "horn_delta_final_vs_baseline": -0.0015373269716896232,
+      "horn_relative_improvement_final_pct": 0.05902641612801787,
+      "baseline_wall_seconds_mean": 240.57677090168,
+      "horn_wall_seconds_mean": 247.14145302772522
+    }
+  ],
+  "best_horn_horizon": "horizon_512",
+  "best_horn_block_size": 512,
+  "best_horn_final_val_loss_mean": 2.3771363615989687,
+  "best_delta_horizon": "horizon_2048",
+  "best_delta_horn_minus_baseline": -0.0015373269716896232
+}

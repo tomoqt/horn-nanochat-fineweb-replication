@@ -1,0 +1,134 @@
+planned_tokens_per_step=4096
+=== Running horizon_512 ===
+outdir=/Users/tensorqt/Downloads/paper replication/scaling_runs/horizon_long_steps_512_2048/horizon_512
+block_size=512 batch_size=8 steps=1200
+device=mps
+vocab_size=600 train_tokens=7222914 val_tokens=802547
+
+=== Run 1/4: variant=baseline seed=1337 ===
+/Users/tensorqt/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[baseline] seed=1337 step=0/1200 train=6.4178 val=6.4217
+[baseline] seed=1337 step=200/1200 train=2.6174 val=2.6431
+[baseline] seed=1337 step=400/1200 train=2.5927 val=2.6084
+[baseline] seed=1337 step=600/1200 train=2.5729 val=2.6047
+[baseline] seed=1337 step=800/1200 train=2.5689 val=2.5891
+[baseline] seed=1337 step=1000/1200 train=2.4924 val=2.5240
+[baseline] seed=1337 step=1200/1200 train=2.3751 val=2.3766
+
+=== Run 2/4: variant=baseline seed=2027 ===
+[baseline] seed=2027 step=0/1200 train=6.4114 val=6.4092
+[baseline] seed=2027 step=200/1200 train=2.6114 val=2.6357
+[baseline] seed=2027 step=400/1200 train=2.5839 val=2.6119
+[baseline] seed=2027 step=600/1200 train=2.5819 val=2.6177
+[baseline] seed=2027 step=800/1200 train=2.5576 val=2.5745
+[baseline] seed=2027 step=1000/1200 train=2.4178 val=2.4410
+[baseline] seed=2027 step=1200/1200 train=2.2662 val=2.3076
+
+=== Run 3/4: variant=horn seed=1337 ===
+[horn] seed=1337 step=0/1200 train=6.4042 val=6.4078
+[horn] seed=1337 step=200/1200 train=2.6133 val=2.6388
+[horn] seed=1337 step=400/1200 train=2.5911 val=2.6061
+[horn] seed=1337 step=600/1200 train=2.5698 val=2.6017
+[horn] seed=1337 step=800/1200 train=2.5630 val=2.5825
+[horn] seed=1337 step=1000/1200 train=2.4952 val=2.5310
+[horn] seed=1337 step=1200/1200 train=2.4016 val=2.4008
+
+=== Run 4/4: variant=horn seed=2027 ===
+[horn] seed=2027 step=0/1200 train=6.4050 val=6.4022
+[horn] seed=2027 step=200/1200 train=2.6103 val=2.6347
+[horn] seed=2027 step=400/1200 train=2.5829 val=2.6100
+[horn] seed=2027 step=600/1200 train=2.5780 val=2.6145
+[horn] seed=2027 step=800/1200 train=2.5537 val=2.5714
+[horn] seed=2027 step=1000/1200 train=2.4436 val=2.4666
+[horn] seed=2027 step=1200/1200 train=2.3146 val=2.3535
+{
+  "baseline": {
+    "n_runs": 2,
+    "final_val_loss_mean": 2.342136295636495,
+    "final_val_loss_std": 0.03449971675872798,
+    "best_val_loss_mean": 2.342136295636495,
+    "best_val_loss_std": 0.03449971675872798,
+    "wall_seconds_mean": 77.15799498558044,
+    "delta_final_vs_baseline": 0.0,
+    "delta_best_vs_baseline": 0.0
+  },
+  "horn": {
+    "n_runs": 2,
+    "final_val_loss_mean": 2.3771363615989687,
+    "final_val_loss_std": 0.02364902098973576,
+    "best_val_loss_mean": 2.3771363615989687,
+    "best_val_loss_std": 0.02364902098973576,
+    "wall_seconds_mean": 84.54508447647095,
+    "delta_final_vs_baseline": 0.03500006596247385,
+    "delta_best_vs_baseline": 0.03500006596247385,
+    "relative_improvement_final_pct": -1.4943650387759475
+  }
+}
+planned_tokens_per_step=4096
+=== Running horizon_2048 ===
+outdir=/Users/tensorqt/Downloads/paper replication/scaling_runs/horizon_long_steps_512_2048/horizon_2048
+block_size=2048 batch_size=2 steps=1200
+device=mps
+vocab_size=600 train_tokens=7222914 val_tokens=802547
+
+=== Run 1/4: variant=baseline seed=1337 ===
+/Users/tensorqt/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[baseline] seed=1337 step=0/1200 train=6.4014 val=6.3993
+[baseline] seed=1337 step=200/1200 train=2.6200 val=2.6766
+[baseline] seed=1337 step=400/1200 train=2.6218 val=2.6578
+[baseline] seed=1337 step=600/1200 train=2.5948 val=2.6507
+[baseline] seed=1337 step=800/1200 train=2.5907 val=2.6189
+[baseline] seed=1337 step=1000/1200 train=2.5637 val=2.6192
+[baseline] seed=1337 step=1200/1200 train=2.5850 val=2.6228
+
+=== Run 2/4: variant=baseline seed=2027 ===
+[baseline] seed=2027 step=0/1200 train=6.4757 val=6.4751
+[baseline] seed=2027 step=200/1200 train=2.6325 val=2.6729
+[baseline] seed=2027 step=400/1200 train=2.5928 val=2.6304
+[baseline] seed=2027 step=600/1200 train=2.5987 val=2.6197
+[baseline] seed=2027 step=800/1200 train=2.5791 val=2.6067
+[baseline] seed=2027 step=1000/1200 train=2.5820 val=2.6094
+[baseline] seed=2027 step=1200/1200 train=2.6046 val=2.5861
+
+=== Run 3/4: variant=horn seed=1337 ===
+[horn] seed=1337 step=0/1200 train=6.4087 val=6.4054
+[horn] seed=1337 step=200/1200 train=2.6191 val=2.6752
+[horn] seed=1337 step=400/1200 train=2.6222 val=2.6569
+[horn] seed=1337 step=600/1200 train=2.5932 val=2.6487
+[horn] seed=1337 step=800/1200 train=2.5927 val=2.6204
+[horn] seed=1337 step=1000/1200 train=2.5633 val=2.6193
+[horn] seed=1337 step=1200/1200 train=2.5848 val=2.6212
+
+=== Run 4/4: variant=horn seed=2027 ===
+[horn] seed=2027 step=0/1200 train=6.4880 val=6.4870
+[horn] seed=2027 step=200/1200 train=2.6326 val=2.6735
+[horn] seed=2027 step=400/1200 train=2.5905 val=2.6285
+[horn] seed=2027 step=600/1200 train=2.5966 val=2.6155
+[horn] seed=2027 step=800/1200 train=2.5786 val=2.6060
+[horn] seed=2027 step=1000/1200 train=2.5820 val=2.6084
+[horn] seed=2027 step=1200/1200 train=2.6030 val=2.5847
+{
+  "baseline": {
+    "n_runs": 2,
+    "final_val_loss_mean": 2.60447283188502,
+    "final_val_loss_std": 0.018358608086904038,
+    "best_val_loss_mean": 2.602491581439972,
+    "best_val_loss_std": 0.016377357641855994,
+    "wall_seconds_mean": 240.57677090168,
+    "delta_final_vs_baseline": 0.0,
+    "delta_best_vs_baseline": 0.0
+  },
+  "horn": {
+    "n_runs": 2,
+    "final_val_loss_mean": 2.6029355049133303,
+    "final_val_loss_std": 0.01828257242838549,
+    "best_val_loss_mean": 2.6019570787747703,
+    "best_val_loss_std": 0.017304146289825573,
+    "wall_seconds_mean": 247.14145302772522,
+    "delta_final_vs_baseline": -0.0015373269716896232,
+    "delta_best_vs_baseline": -0.0005345026652014973,
+    "relative_improvement_final_pct": 0.05902641612801787
+  }
+}

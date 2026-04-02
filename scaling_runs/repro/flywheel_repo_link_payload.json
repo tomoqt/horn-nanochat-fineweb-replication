@@ -62,6 +62,16 @@
         "scaling_runs/horizon_branch_extended/horizon_branch_report.md",
         "scaling_runs/plots/horizon_extended_final_loss_bars.png"
       ]
+    },
+    "pending_long_steps_horizon_node": {
+      "title": "Token horizon long-step follow-up (1200 steps, 512+2048)",
+      "paths": [
+        "scaling_plans/token_horizon_long_steps_512_2048.json",
+        "scaling_runs/horizon_long_steps_512_2048/horizon_branch_summary.json",
+        "scaling_runs/horizon_long_steps_512_2048/horizon_branch_report.md",
+        "scaling_runs/horizon_long_steps_512_2048/horizon_600_vs_1200_comparison.md",
+        "scaling_runs/plots/horizon_long_steps_512_2048_bars.png"
+      ]
     }
   }
 }
